@@ -15,27 +15,34 @@ module.exports.getTenCounts = function (dir_name) {
             fs.statSync(`${dir}/${a}`).mtime.getTime();
     });
     let result = "";
-    result += "<p>Тип тендера: " + dk[0] + "</p>";
+    result += `<p>Тип тендера: ${dk[0]}</p>`;
     for (let f of dir_list) {
         let date = getDateFromString(f);
         let counts = getCountFromFile(`${dir}/${f}`);
-        result += "<p><strong>Дата: " + date + "</strong></p>";
-        result += "<p>Путь к файлу: " + `${dir}/${f}` + "</p>";
+        let param = `${dir}/${f}`.replace(/\//g, '--');
+        result += `<p><strong>Дата: ${date}</strong></p>`;
+        result += `<p>Смотреть файл протокола: <a href='/tenders/${dk[0]}/${param}'>${dir}/${f}</a></p>`;
         result += "<ul>";
         for (let o of counts) {
-            result += "<li>" + o + "</li>";
+            result += `<li>${o}</li>`;
         }
         result += "</br></br>";
         result += "</ul>";
     }
     return new hbs.SafeString(result)
-
-
 };
+
+module.exports.getFile = function (file) {
+    let ftext = fs.readFileSync(file, "utf8");
+    let result = "";
+    result += `<pre>${ftext}</pre>`;
+    return new hbs.SafeString(result)
+};
+
 module.exports.GetTenList = function (dir_l) {
     let result = "";
-    result += "<p>Тип тендера: <strong>" + dir_l[0] + "</strong></p>";
-    result += "<p>Смотреть отчеты: " + "<a href='/tenders/" + dir_l[0] + "' >" + dir_l[0] + "</a>" + "</p>";
+    result += `<p>Тип парсера: <strong>${dir_l[0]}</strong></p>`;
+    result += `<p>Смотреть отчеты: <a href='/tenders/${dir_l[0]}'>${dir_l[0]}</a></p><br></p>`;
     return new hbs.SafeString(result)
 };
 
@@ -54,7 +61,7 @@ function getDateFromString(s) {
 function getCountFromFile(s) {
     let ftext = fs.readFileSync(s, "utf8");
     let reg = /(Добав(или|лено)|Обнов(лено|или)) .* (\d+)/gm;
-    return ftext.match(reg)
+    return ftext.match(reg) || []
 
 }
 
@@ -116,9 +123,7 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersMvideo', 'UnParserSelen/log_mvideo')
     .set('TendersSafMar', 'UnParserSelen/log_safmar')
     .set('TendersTalan', 'UnParserSelen/log_talan')
-    .set('TendersTander', 'UnParserSelen/log_tander')
-
-;
+    .set('TendersTander', 'UnParserSelen/log_tander');
 
 
 let export_map = [];

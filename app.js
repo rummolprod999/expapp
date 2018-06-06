@@ -12,6 +12,7 @@ const app = express();
 const hbs = require("hbs");
 hbs.registerHelper('getTenCounts', fun.getTenCounts);
 hbs.registerHelper('GetTenList', fun.GetTenList);
+hbs.registerHelper('getFile', fun.getFile);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -42,4 +43,3 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 module.exports = app;
-app.listen(3000);
