@@ -1,8 +1,10 @@
 <h1>{{title}}</h1>
 <p>{{title}}</p>
+<ol>
 {{#each tenders}}
     <div>
-        {{GetTenList this}}
+        <li>{{GetTenList this}}</li>
     </div>
 
 {{/each}}
+</ol>

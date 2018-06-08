@@ -65,7 +65,7 @@ function getCountFromFile(s) {
 
 }
 
-const dir_prefix = '/home/alex/WebstormProjects/expapp/tenders.enter-it.ru/python/';
+const dir_prefix = '/srv/tenders.enter-it.ru/python/';
 let map = new Map();
 map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('Tenders223Fz', 'ParserTenders/log_tenders223')
@@ -123,7 +123,9 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersMvideo', 'UnParserSelen/log_mvideo')
     .set('TendersSafMar', 'UnParserSelen/log_safmar')
     .set('TendersTalan', 'UnParserSelen/log_talan')
-    .set('TendersTander', 'UnParserSelen/log_tander');
+    .set('TendersTander', 'UnParserSelen/log_tander')
+    .set('TendersKomTech', 'ParserWebGo/log_komtech')
+    .set('OnlineContract', 'ParserWebGo/log_onlinecontract');
 
 
 let export_map = [];
