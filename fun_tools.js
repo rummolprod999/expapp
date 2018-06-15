@@ -125,7 +125,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersTalan', 'UnParserSelen/log_talan')
     .set('TendersTander', 'UnParserSelen/log_tander')
     .set('TendersKomTech', 'ParserWebGo/log_komtech')
-    .set('OnlineContract', 'ParserWebGo/log_onlinecontract');
+    .set('OnlineContract', 'ParserWebGo/log_onlinecontract')
+    .set('RosElTorg', 'ParserWebFSharp/log_tenders_rossel');
 
 
 let export_map = [];
