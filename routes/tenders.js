@@ -8,7 +8,8 @@ router.get('/:tenderType', function(req, res, next) {
 });
 router.get('/:tenderType/:file', function(req, res, next) {
     let file = req.params['file'].replace(/--/g, '/');
-    res.render('file', { title: 'Файл протокола работы парсера', file: file});
+    let prev = req.params['tenderType'];
+    res.render('file', { title: 'Файл протокола работы парсера', file: file, prev: prev});
 });
 
 module.exports = router;

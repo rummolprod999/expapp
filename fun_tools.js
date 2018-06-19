@@ -21,6 +21,7 @@ module.exports.getTenCounts = function (dir_name) {
         let counts = getCountFromFile(`${dir}/${f}`);
         let param = `${dir}/${f}`.replace(/\//g, '--');
         result += `<p><strong>Дата: ${date}</strong></p>`;
+        result += `<p><a href="/">Вернуться назад</a></p>`;
         result += `<p>Смотреть файл протокола: <a href='/tenders/${dk[0]}/${param}'>${dir}/${f}</a></p>`;
         result += "<ul>";
         for (let o of counts) {
