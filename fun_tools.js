@@ -127,7 +127,23 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersTander', 'UnParserSelen/log_tander')
     .set('TendersKomTech', 'ParserWebGo/log_komtech')
     .set('OnlineContract', 'ParserWebGo/log_onlinecontract')
-    .set('RosElTorg', 'ParserWebFSharp/log_tenders_rossel');
+    .set('RosElTorg', 'ParserWebFSharp/log_tenders_rossel')
+    .set('TendersCpc', 'ParserWebGo/log_cpc')
+    .set('DemoAccess', 'log_send_email')
+    .set('TendersMosReg', 'UnParserSelen/log_mosreg')
+    .set('TendersRfp', 'ParserWebUniversal/log_rfp')
+    .set('TendersNeftAvtomatika', 'ParserWebFSharp/log_tenders_neft')
+    .set('TendersSlavNeft', 'ParserWebFSharp/log_tenders_slav')
+    .set('TendersAeroFlot', 'ParserWebFSharp/log_tenders_aero')
+    .set('TendersNovatek', 'ParserWebGo/log_novatek')
+    .set('TendersAzot', 'ParserWebGo/log_azot')
+    .set('TendersUgmk', 'UnParserSelen/log_ugmk')
+    .set('TendersZakupki', 'ParserWebUniversal/log_zakupki')
+    .set('TendersUva', 'ParserWebGo/log_uva')
+    .set('TendersAgrokomplex', 'ParserWebCore/log_agrocomplex')
+    .set('TendersImperiaTorgov', 'UnParserSelen/log_imptorgov')
+    .set('TendersKzGroup', 'ParserWebCore/log_kzgroup')
+    .set('TendersAgroTomsk', 'ParserWebCore/log_agrotomsk');
 
 
 let export_map = [];
