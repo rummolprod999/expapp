@@ -1,6 +1,72 @@
 let fs = require('fs');
 const hbs = require("hbs");
 
+function getGraphAll(dir_name) {
+    let dk = [];
+    for (let d of export_map) {
+        if (d[0] === dir_name) {
+            dk = d;
+        }
+    }
+    let dir = dk[1];
+    let dir_list = fs.readdirSync(dir);
+    dir_list.sort(function (a, b) {
+        return fs.statSync(`${dir}/${b}`).mtime.getTime() -
+            fs.statSync(`${dir}/${a}`).mtime.getTime();
+    });
+    let added = [];
+    let dates = [];
+    for (let f of dir_list) {
+        let date = getDateFromString(f);
+        let dateParts = date.split("-");
+        if (dateParts[2].length === 4) {
+            let ddd = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+            dates.push(ddd);
+        }
+        else {
+            dates.push(date);
+        }
+        let countsAdded = getAddedFromFile(`${dir}/${f}`);
+        added.push(countsAdded);
+    }
+    let result = "";
+    let obb = [];
+    for (let i = 0; i < added[0].length; i++) {
+        let temp = [];
+        for (let j = 0; j < added.length; j++) {
+            temp.push(added[j][i]);
+        }
+        obb.push({dates: dates, counts: temp})
+    }
+
+    return obb
+}
+
+module.exports.getGraph = function (dir_name) {
+    let a = getGraphAll(dir_name);
+    let result = "";
+    for (let i = 0; i < a.length; i++) {
+        let cc = [];
+        for (let ccc of a[i].counts) {
+            if (ccc) {
+                cc.push(ccc.count)
+            }
+            else {
+                cc.push(0)
+            }
+        }
+        result += `<div>${a[i].counts[0].name}</div><div id="tester${i}" style="width:600px;height:250px;"></div>
+<script>
+    TESTER${i} = document.getElementById('tester${i}');
+    Plotly.plot( TESTER${i}, [{
+        x: ${JSON.stringify(a[i].dates)},
+        y: ${JSON.stringify(cc) },type: 'bar'}], {
+        margin: { t: 0 } } );
+</script>`
+    }
+    return new hbs.SafeString(result)
+};
+
 module.exports.getTenCounts = function (dir_name) {
     let dk = [];
     for (let d of export_map) {
@@ -54,15 +120,37 @@ function getDateFromString(s) {
     }
     reg = /(\d{2}_\d{2}_\d{4})/;
     if (s.match(reg)) {
-        return s.match(reg)[0]
+        return s.match(reg)[0].replace(/_/gi, "-")
     }
 
 }
+
 
 function getCountFromFile(s) {
     let ftext = fs.readFileSync(s, "utf8");
     let reg = /(Добав(или|лено)|Обнов(лено|или)) .* (\d+)/gm;
     return ftext.match(reg) || []
+
+}
+
+function getAddedFromFile(s) {
+    let ftext = fs.readFileSync(s, "utf8");
+    let reg = /Добав(?:или|лено) .* (\d+)/gm;
+    let ob_list = [];
+    let match;
+    while ((match = reg.exec(ftext)) !== null) {
+        // сначала выведет первое совпадение: <h1>,h1
+        // затем выведет второе совпадение: </h1>,/h1
+        let free_string = match[0].replace(/(\d+)$/, "").trim();
+        let index = ob_list.findIndex(x => x.name === free_string);
+        if (index === -1) {
+            ob_list.push({name: free_string, count: Number(match[1])});
+        }
+        else {
+            ob_list[index] = {name: free_string, count: ob_list[index].count + Number(match[1])}
+        }
+    }
+    return ob_list
 
 }
 
