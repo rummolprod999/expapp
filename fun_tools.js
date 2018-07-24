@@ -29,7 +29,6 @@ function getGraphAll(dir_name) {
         let countsAdded = getAddedFromFile(`${dir}/${f}`);
         added.push(countsAdded);
     }
-    let result = "";
     let obb = [];
     for (let i = 0; i < added[0].length; i++) {
         let temp = [];
@@ -154,7 +153,7 @@ function getAddedFromFile(s) {
 
 }
 
-const dir_prefix = '/srv/tenders.enter-it.ru/python/';
+const dir_prefix = '/home/alex/Загрузки/tenders.enter-it.ru/python/';
 let map = new Map();
 map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('Tenders223Fz', 'ParserTenders/log_tenders223')
