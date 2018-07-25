@@ -15,6 +15,7 @@ function getGraphAll(dir_name) {
             fs.statSync(`${dir}/${a}`).mtime.getTime();
     });
     let added = [];
+    let updated = [];
     let dates = [];
     for (let f of dir_list) {
         let date = getDateFromString(f);
@@ -27,15 +28,24 @@ function getGraphAll(dir_name) {
             dates.push(date);
         }
         let countsAdded = getAddedFromFile(`${dir}/${f}`);
+        let countsUpdates = getUpdatedFromFile(`${dir}/${f}`);
         added.push(countsAdded);
+        updated.push(countsUpdates);
     }
     let obb = [];
     for (let i = 0; i < added[0].length; i++) {
         let temp = [];
+        let add = [];
         for (let j = 0; j < added.length; j++) {
             temp.push(added[j][i]);
+            if (updated[j][i]) {
+                add.push(updated[j][i])
+            }
+            else {
+                add.push({})
+            }
         }
-        obb.push({dates: dates, counts: temp})
+        obb.push({dates: dates, counts: temp, added: add})
     }
 
     return obb
@@ -46,6 +56,7 @@ module.exports.getGraph = function (dir_name) {
     let result = "";
     for (let i = 0; i < a.length; i++) {
         let cc = [];
+        let dd = [];
         for (let ccc of a[i].counts) {
             if (ccc) {
                 cc.push(ccc.count)
@@ -54,13 +65,36 @@ module.exports.getGraph = function (dir_name) {
                 cc.push(0)
             }
         }
-        result += `<div>${a[i].counts[0].name}</div><div id="tester${i}" style="width:600px;height:250px;"></div>
+        for (let ccc of a[i].added) {
+            if (ccc.count) {
+                dd.push(ccc.count)
+            }
+            else {
+                dd.push(0)
+            }
+        }
+        result += `<div>${a[i].counts[0].name}</div><div id="tester${i}" style="width:800px;height:350px;"></div>
 <script>
     TESTER${i} = document.getElementById('tester${i}');
-    Plotly.plot( TESTER${i}, [{
-        x: ${JSON.stringify(a[i].dates)},
-        y: ${JSON.stringify(cc) },type: 'bar'}], {
-        margin: { t: 0 } } );
+    var trace1 = {
+  x: ${JSON.stringify(a[i].dates)},
+  y: ${JSON.stringify(cc) },
+  name: 'Добавили',
+  type: 'bar'
+};
+
+var trace2 = {
+  x: ${JSON.stringify(a[i].dates)},
+  y: ${JSON.stringify(dd) },
+  name: 'Обновили',
+  type: 'bar'
+};
+
+var data = [trace1, trace2];
+
+var layout = {barmode: 'group'};
+
+Plotly.newPlot(TESTER${i}, data, layout);
 </script>`
     }
     return new hbs.SafeString(result)
@@ -153,7 +187,28 @@ function getAddedFromFile(s) {
 
 }
 
-const dir_prefix = '/home/alex/Загрузки/tenders.enter-it.ru/python/';
+function getUpdatedFromFile(s) {
+    let ftext = fs.readFileSync(s, "utf8");
+    let reg = /Обнов(?:лено|или) .* (\d+)/gm;
+    let ob_list = [];
+    let match;
+    while ((match = reg.exec(ftext)) !== null) {
+        // сначала выведет первое совпадение: <h1>,h1
+        // затем выведет второе совпадение: </h1>,/h1
+        let free_string = match[0].replace(/(\d+)$/, "").trim();
+        let index = ob_list.findIndex(x => x.name === free_string);
+        if (index === -1) {
+            ob_list.push({name: free_string, count: Number(match[1])});
+        }
+        else {
+            ob_list[index] = {name: free_string, count: ob_list[index].count + Number(match[1])}
+        }
+    }
+    return ob_list
+
+}
+
+const dir_prefix = '/srv/tenders.enter-it.ru/python/';
 let map = new Map();
 map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('Tenders223Fz', 'ParserTenders/log_tenders223')
@@ -230,7 +285,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersAgrokomplex', 'ParserWebCore/log_agrocomplex')
     .set('TendersImperiaTorgov', 'UnParserSelen/log_imptorgov')
     .set('TendersKzGroup', 'ParserWebCore/log_kzgroup')
-    .set('TendersAgroTomsk', 'ParserWebCore/log_agrotomsk');
+    .set('TendersAgroTomsk', 'ParserWebCore/log_agrotomsk')
+    .set('TendersStroyTorgi', 'ParserWebFSharp/log_tenders_stroytorgi');
 
 
 let export_map = [];

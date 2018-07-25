@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-      <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
-      <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.css' />
-      <script src="/javascripts/plotly-latest.min.js"></script>
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css'/>
+    <link rel='stylesheet' href='/stylesheets/bootstrap-responsive.css'/>
+    <meta http-equiv='X-UA-Compatible' content='IE=11'>
+    <script>
+        window.onerror = myOnError;
+
+        function myOnError(msg, url, lno) {
+            return true;
+        }
+    </script>
+    <script>if (typeof window.Int16Array !== 'function') document.write("<scri" + "pt src='/javascripts/extras/typedarray.min.js'></scr" + "ipt>");</script>
+    <script>document.write("<scri" + "pt src='/javascripts/extras/request_animation_frame.js'></scr" + "ipt>");</script>
+    <script src="/javascripts/plotly.js"></script>
+    <script src="/javascripts/plotly-locale-ru.js"></script>
+    <script>Plotly.setPlotConfig({locale: 'ru'})</script>
+
+</head>
+<body>
+{{{body}}}
+</body>
 </html>
