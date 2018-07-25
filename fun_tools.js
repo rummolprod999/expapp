@@ -92,7 +92,7 @@ var trace2 = {
 
 var data = [trace1, trace2];
 
-var layout = {barmode: 'group'};
+var layout = {barmode: 'stack'};
 
 Plotly.newPlot(TESTER${i}, data, layout);
 </script>`
