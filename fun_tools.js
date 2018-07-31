@@ -143,6 +143,7 @@ module.exports.GetTenList = function (dir_l) {
     let result = "";
     result += `<p>Тип парсера: <strong>${dir_l[0]}</strong></p>`;
     result += `<p>Смотреть отчеты: <a href='/tenders/${dir_l[0]}'>${dir_l[0]}</a></p><br></p>`;
+    result += `<p>Смотреть графики загрузки: <a href='/graph/${dir_l[0]}'>${dir_l[0]}</a></p><br></p>`;
     return new hbs.SafeString(result)
 };
 
@@ -216,7 +217,9 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersFabrikant', 'ParserFabrikant/LogFabrikant')
     .set('TendersRosneft', 'ParserRosneft/LogRosneft')
     .set('TendersOTC', 'ParserOTC/log_tenders_otc')
-    .set('ContractsOpenData', 'ParserContracts223Sharp/log_parsing')
+    .set('Contracts223OpenData', 'ParserContracts223Sharp/log_parsing/contr223')
+    .set('Customers223OpenData', 'ParserContracts223Sharp/log_parsing/customer')
+    .set('Suppliers223OpenData', 'ParserContracts223Sharp/log_parsing/supplier')
     .set('Contracts223', 'ParserContracts44Sharp/log_contracts223')
     .set('Contracts44', 'ParserContracts44Sharp/log_contracts44')
     .set('TendersKomos', 'ParserKotlin/log_tender_komos')
@@ -240,7 +243,6 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('Tenders615', 'ParserTenders/log_tenders615')
     .set('TendersFromEIS', 'ParserTenders/log_tenders_web')
     .set('TendersUkr', 'ParserUkr/log_tenders_ukr')
-    .set('BankGuarantee44', 'ParserUnfair/log_bank')
     .set('Complaint44', 'ParserUnfair/log_complaint')
     .set('ComplaintResult44', 'ParserUnfair/log_complaint_result')
     .set('RNP', 'ParserUnfair/log_rnp')
@@ -286,7 +288,9 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersImperiaTorgov', 'UnParserSelen/log_imptorgov')
     .set('TendersKzGroup', 'ParserWebCore/log_kzgroup')
     .set('TendersAgroTomsk', 'ParserWebCore/log_agrotomsk')
-    .set('TendersStroyTorgi', 'ParserWebFSharp/log_tenders_stroytorgi');
+    .set('TendersStroyTorgi', 'ParserWebFSharp/log_tenders_stroytorgi')
+    .set('TendersSibPrime', 'UnParserSelen/log_sibprime')
+    .set('TendersSibIntek', 'ParserWebCore/log_sibintek');
 
 
 let export_map = [];
