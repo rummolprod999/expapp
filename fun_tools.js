@@ -142,7 +142,7 @@ module.exports.getFile = function (file) {
 module.exports.GetTenList = function (dir_l) {
     let result = "";
     result += `<p>Тип парсера: <strong>${dir_l[0]}</strong></p>`;
-    result += `<p>Смотреть отчеты: <a href='/tenders/${dir_l[0]}'>${dir_l[0]}</a></p><br></p>`;
+    result += `<p>Смотреть отчеты: <a href='/tenders/${dir_l[0]}'>${dir_l[0]}</a></p>`;
     result += `<p>Смотреть графики загрузки: <a href='/graph/${dir_l[0]}'>${dir_l[0]}</a></p><br></p>`;
     return new hbs.SafeString(result)
 };
