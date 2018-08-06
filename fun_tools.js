@@ -82,7 +82,38 @@ module.exports.getGraph = function (dir_name) {
   name: 'Добавили',
   type: 'bar'
 };
-
+    
+module.exports.getGraphA = function (dir_name) {
+    let a = getGraphAll(dir_name);
+    let result = "";
+    for (let i = 0; i < a.length; i++) {
+        let cc = [];
+        let dd = [];
+        for (let ccc of a[i].counts) {
+            if (ccc) {
+                cc.push(ccc.count)
+            }
+            else {
+                cc.push(0)
+            }
+        }
+        for (let ccc of a[i].added) {
+            if (ccc.count) {
+                dd.push(ccc.count)
+            }
+            else {
+                dd.push(0)
+            }
+        }
+        result += \`<div>${a[i].counts[0].name}</div><div id="tester${i}_${dir_name}" style="width:800px;height:350px;"></div>
+<script>
+    TESTER${i}_${dir_name} = document.getElementById('tester${i}_${dir_name}');
+    var trace1 = {
+  x: ${JSON.stringify(a[i].dates)},
+  y: ${JSON.stringify(cc) },
+  name: 'Добавили',
+  type: 'bar'
+};
 var trace2 = {
   x: ${JSON.stringify(a[i].dates)},
   y: ${JSON.stringify(dd) },
