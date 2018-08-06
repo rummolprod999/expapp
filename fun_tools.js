@@ -82,38 +82,7 @@ module.exports.getGraph = function (dir_name) {
   name: 'Добавили',
   type: 'bar'
 };
-    
-module.exports.getGraphA = function (dir_name) {
-    let a = getGraphAll(dir_name);
-    let result = "";
-    for (let i = 0; i < a.length; i++) {
-        let cc = [];
-        let dd = [];
-        for (let ccc of a[i].counts) {
-            if (ccc) {
-                cc.push(ccc.count)
-            }
-            else {
-                cc.push(0)
-            }
-        }
-        for (let ccc of a[i].added) {
-            if (ccc.count) {
-                dd.push(ccc.count)
-            }
-            else {
-                dd.push(0)
-            }
-        }
-        result += \`<div>${a[i].counts[0].name}</div><div id="tester${i}_${dir_name}" style="width:800px;height:350px;"></div>
-<script>
-    TESTER${i}_${dir_name} = document.getElementById('tester${i}_${dir_name}');
-    var trace1 = {
-  x: ${JSON.stringify(a[i].dates)},
-  y: ${JSON.stringify(cc) },
-  name: 'Добавили',
-  type: 'bar'
-};
+
 var trace2 = {
   x: ${JSON.stringify(a[i].dates)},
   y: ${JSON.stringify(dd) },
@@ -128,6 +97,59 @@ var layout = {barmode: 'stack'};
 Plotly.newPlot(TESTER${i}, data, layout);
 </script>`
     }
+    return new hbs.SafeString(result)
+};
+
+module.exports.getGraphA = function () {
+    let result = "";
+    for (let d of export_map) {
+        let a = getGraphAll(d[0]);
+        result += `<br><br><div><b>${d[0]}</b></div>`;
+        for (let i = 0; i < a.length; i++) {
+            let cc = [];
+            let dd = [];
+            for (let ccc of a[i].counts) {
+                if (ccc) {
+                    cc.push(ccc.count)
+                }
+                else {
+                    cc.push(0)
+                }
+            }
+            for (let ccc of a[i].added) {
+                if (ccc.count) {
+                    dd.push(ccc.count)
+                }
+                else {
+                    dd.push(0)
+                }
+            }
+            result += `<div>${a[i].counts[0].name}</div><div id="tester${i}_${d[0]}" style="width:800px;height:350px;"></div>
+<script>
+    TESTER${i}_${d[0]} = document.getElementById('tester${i}_${d[0]}');
+    var trace1 = {
+  x: ${JSON.stringify(a[i].dates)},
+  y: ${JSON.stringify(cc) },
+  name: 'Добавили',
+  type: 'bar'
+};
+
+var trace2 = {
+  x: ${JSON.stringify(a[i].dates)},
+  y: ${JSON.stringify(dd) },
+  name: 'Обновили',
+  type: 'bar'
+};
+
+var data = [trace1, trace2];
+
+var layout = {barmode: 'stack'};
+
+Plotly.newPlot(TESTER${i}_${d[0]}, data, layout);
+</script>`
+        }
+    }
+
     return new hbs.SafeString(result)
 };
 
@@ -239,6 +261,7 @@ function getUpdatedFromFile(s) {
     return ob_list
 
 }
+
 const dir_prefix = '/srv/tenders.enter-it.ru/python/';
 let map = new Map();
 map.set('Tenders44Fz', 'ParserTenders/log_tenders44')

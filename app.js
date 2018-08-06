@@ -15,6 +15,7 @@ hbs.registerHelper('getTenCounts', fun.getTenCounts);
 hbs.registerHelper('GetTenList', fun.GetTenList);
 hbs.registerHelper('getFile', fun.getFile);
 hbs.registerHelper('getGraph', fun.getGraph);
+hbs.registerHelper('getGraphA', fun.getGraphA);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
