@@ -208,7 +208,6 @@ function getUpdatedFromFile(s) {
     return ob_list
 
 }
-
 const dir_prefix = '/srv/tenders.enter-it.ru/python/';
 let map = new Map();
 map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
