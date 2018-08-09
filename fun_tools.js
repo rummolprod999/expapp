@@ -346,7 +346,10 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersSibIntek', 'ParserWebCore/log_sibintek')
     .set('TendersAsgor', 'ParserWebFSharp/log_tenders_asgor')
     .set('TendersSetOnline', 'ParserWebCore/log_setonline')
-    .set('TendersCrimeaBt', 'UnParserSelen/log_crimeabt');
+    .set('TendersCrimeaBt', 'UnParserSelen/log_crimeabt')
+    .set('TendersSalavat', 'ParserKotlinNew/logdir_tenders_salavat')
+    .set('TendersGosYakut', 'ParserWebFSharp/log_tenders_gosyakut')
+    .set('TendersIceTrade', 'ParserWebGo/log_icetrade');
 
 
 let export_map = [];
