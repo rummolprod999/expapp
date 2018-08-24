@@ -1,10 +1,7 @@
 <h1>{{title}}</h1>
 <p>{{title}}</p>
-<ol>
-{{#each tenders}}
-    <div>
-        <li>{{GetTenList this}}</li>
-    </div>
-
-{{/each}}
+<ol class="list-group list-group-flush">
+    {{#each tenders}}
+        <li class="list-group-tender">{{GetTenList this}}</li>
+    {{/each}}
 </ol>

@@ -172,7 +172,7 @@ module.exports.getTenCounts = function (dir_name) {
         let date = getDateFromString(f);
         let counts = getCountFromFile(`${dir}/${f}`);
         let param = `${dir}/${f}`.replace(/\//g, '--');
-        result += `<p><strong>Дата: ${date}</strong></p>`;
+        result += `<div class="list-group-all"><p><strong>Дата: ${date}</strong></p>`;
         result += `<p><a href="/">Вернуться назад</a></p>`;
         result += `<p>Смотреть файл протокола: <a href='/tenders/${dk[0]}/${param}'>${dir}/${f}</a></p>`;
         result += "<ul>";
@@ -180,7 +180,7 @@ module.exports.getTenCounts = function (dir_name) {
             result += `<li>${o}</li>`;
         }
         result += "</br></br>";
-        result += "</ul>";
+        result += "</ul></div>";
     }
     return new hbs.SafeString(result)
 };
@@ -226,8 +226,6 @@ function getAddedFromFile(s) {
     let ob_list = [];
     let match;
     while ((match = reg.exec(ftext)) !== null) {
-        // сначала выведет первое совпадение: <h1>,h1
-        // затем выведет второе совпадение: </h1>,/h1
         let free_string = match[0].replace(/(\d+)$/, "").trim();
         let index = ob_list.findIndex(x => x.name === free_string);
         if (index === -1) {
@@ -247,8 +245,6 @@ function getUpdatedFromFile(s) {
     let ob_list = [];
     let match;
     while ((match = reg.exec(ftext)) !== null) {
-        // сначала выведет первое совпадение: <h1>,h1
-        // затем выведет второе совпадение: </h1>,/h1
         let free_string = match[0].replace(/(\d+)$/, "").trim();
         let index = ob_list.findIndex(x => x.name === free_string);
         if (index === -1) {
@@ -349,7 +345,12 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersCrimeaBt', 'UnParserSelen/log_crimeabt')
     .set('TendersSalavat', 'ParserKotlinNew/logdir_tenders_salavat')
     .set('TendersGosYakut', 'ParserWebFSharp/log_tenders_gosyakut')
-    .set('TendersIceTrade', 'ParserWebGo/log_icetrade');
+    .set('TendersIceTrade', 'ParserWebGo/log_icetrade')
+    .set('TendersBelMarket', 'UnParserSelen/log_belmarket')
+    .set('TendersUmzVrn', 'ParserKotlinNew/logdir_tenders_umz')
+    .set('TendersMzVoron', 'ParserWebCore/log_mzvoron')
+    .set('TendersBico', 'UnParserSelen/log_bico')
+    .set('TendersRosTender', 'ParserWebFSharp/log_tenders_rostend');
 
 
 let export_map = [];
