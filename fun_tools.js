@@ -350,7 +350,16 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersUmzVrn', 'ParserKotlinNew/logdir_tenders_umz')
     .set('TendersMzVoron', 'ParserWebCore/log_mzvoron')
     .set('TendersBico', 'UnParserSelen/log_bico')
-    .set('TendersRosTender', 'ParserWebFSharp/log_tenders_rostend');
+    .set('TendersRosTender', 'ParserWebFSharp/log_tenders_rostend')
+    .set('TendersMaxiDevelopment', 'ParserWebCore/log_maxi')
+    .set('TendersChebakulPt', 'ParserWebFSharp/log_tenders_chpt')
+    .set('TendersTver', 'ParserWebCore/log_tver')
+    .set('TendersMurman', 'ParserWebCore/log_murman')
+    .set('TendersKalug', 'ParserWebCore/log_kalug')
+    .set('TendersSmol', 'ParserWebCore/log_smol')
+    .set('TendersSamar', 'ParserWebCore/log_samar')
+    .set('TendersUdmurt', 'ParserWebCore/log_udmurt')
+    .set('TendersRostov', 'UnParserSelen/log_rostov');
 
 
 let export_map = [];
