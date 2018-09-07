@@ -169,7 +169,7 @@ module.exports.getTenCounts = function (dir_name) {
     });
     let result = "";
     result += `<p>Тип парсера: ${dk[0]}</p>`;
-    result += `<p><strong>Площадка: ${get_description(dk[0])}</strong>></p>`;
+    result += `<p><strong>Площадка: ${get_description(dk[0])}</strong></p>`;
     for (let f of dir_list) {
         let date = getDateFromString(f);
         let counts = getCountFromFile(`${dir}/${f}`);
@@ -362,7 +362,11 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersSmol', 'ParserWebCore/log_smol')
     .set('TendersSamar', 'ParserWebCore/log_samar')
     .set('TendersUdmurt', 'ParserWebCore/log_udmurt')
-    .set('TendersRostov', 'UnParserSelen/log_rostov');
+    .set('TendersRostov', 'UnParserSelen/log_rostov')
+    .set('TendersSimferop', 'UnParserSelen/log_simferop')
+    .set('TendersKostroma', 'UnParserSelen/log_kostroma')
+    .set('TendersTomsk', 'UnParserSelen/log_tomsk')
+    .set('TendersZmo', 'UnParserSelen/log_zmo');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -463,7 +467,11 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersSmol', 'Закупки с http://goszakupki.admin-smolensk.ru/, все')
     .set('TendersSamar', 'Закупки с https://webtorgi.samregion.ru/, все')
     .set('TendersUdmurt', 'Закупки с http://wt.mfur.ru/, все')
-    .set('TendersRostov', 'Закупки с https://rostovoblzmo.rts-tender.ru/, все');
+    .set('TendersRostov', 'Закупки с https://rostovoblzmo.rts-tender.ru/, все')
+    .set('TendersSimferop', 'Закупки с https://zakupki-simferopol.rts-tender.ru/, все')
+    .set('TendersKostroma', 'Закупки с https://kostromarket.rts-tender.ru/, все')
+    .set('TendersTomsk', 'Закупки с https://region70.rts-tender.ru/, все')
+    .set('TendersZmo', 'Закупки с https://zmo.rts-tender.ru/, все');
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
