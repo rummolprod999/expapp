@@ -368,7 +368,10 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersTomsk', 'UnParserSelen/log_tomsk')
     .set('TendersZmo', 'UnParserSelen/log_zmo')
     .set('TendersTenderPlusKz', 'ParserWebFSharp/log_tenders_tplus')
-    .set('TendersSegezha', 'ParserWebCore/log_segezha');
+    .set('TendersSegezha', 'ParserWebCore/log_segezha')
+    .set('TendersAkashevo', 'ParserWebCore/log_akashevo')
+    .set('TendersSibServ', 'ParserWebFSharp/log_tenders_sibserv')
+    .set('TendersTenderGuru', 'ParserWebFSharp/log_tenders_tguru');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -475,7 +478,10 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersTomsk', 'Закупки с https://region70.rts-tender.ru/, все')
     .set('TendersZmo', 'Закупки с https://zmo.rts-tender.ru/, все')
     .set('TendersTenderPlusKz', 'Закупки с https://tenderplus.kz/, все')
-    .set('TendersSegezha', 'Закупки с https://segezha-group.com/, коммерческие');
+    .set('TendersSegezha', 'Закупки с https://segezha-group.com/, коммерческие')
+    .set('TendersAkashevo', 'Закупки с http://akashevo.ru/, коммерческие')
+    .set('TendersSibServ', 'Закупки с https://tp.sibserv.com/, коммерческие')
+    .set('TendersTenderGuru', 'Закупки с http://www.tenderguru.ru/, коммерческие');
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
