@@ -1,9 +1,8 @@
 let express = require('express');
 let router = express.Router();
 
-/* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+    file = '/var/log/mariadb/mysql-slow.log';
+    res.render('slow', { title: 'Лог медленных запросов', file: file});
 });
-
 module.exports = router;

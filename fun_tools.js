@@ -194,6 +194,14 @@ module.exports.getFile = function (file) {
     return new hbs.SafeString(result)
 };
 
+module.exports.getFileLog = function (file) {
+    let ftext = fs.readFileSync(file, "utf8");
+    let result = "";
+    ftext = ftext.replace(/Query_time:/g, "<b>Query_time:</b>");
+    result += `<pre>${ftext}</pre>`;
+    return new hbs.SafeString(result)
+};
+
 module.exports.GetTenList = function (dir_l) {
     let result = "";
     result += `<p>Тип парсера: <strong>${dir_l[0]}</strong></p>`;
@@ -376,7 +384,12 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersLsr2', 'ParserKotlinNew/logdir_tenders_lsr')
     .set('TendersBidMart', 'ParserWebFSharp/log_tenders_bidmart')
     .set('TendersSitno', 'ParserWebCore/log_sitno')
-    .set('TendersMonetka', 'ParserWebGo/log_monetka');
+    .set('TendersMonetka', 'ParserWebGo/log_monetka')
+    .set('TendersComita', 'ParserWebFSharp/log_tenders_comita')
+    .set('TendersZmoKursk', 'ParserKotlinNew/logdir_tenders_zmokursk')
+    .set('TendersZmo45', 'ParserKotlinNew/logdir_tenders_zmo45')
+    .set('TendersZmoKurgan', 'ParserKotlinNew/logdir_tenders_zmokurgan')
+    .set('TendersZmoChel', 'ParserKotlinNew/logdir_tenders_zmochel');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -491,7 +504,12 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersLsr2', 'Закупки с http://zakupki.lsr.ru/, коммерческие')
     .set('TendersBidMart', 'Закупки с https://www.bidmart.by/, коммерческие')
     .set('TendersSitno', 'Закупки с http://sitno.ru/, коммерческие')
-    .set('TendersMonetka', 'Закупки с http://www.monetka.ru/, коммерческие');
+    .set('TendersMonetka', 'Закупки с http://www.monetka.ru/, коммерческие')
+    .set('TendersComita', 'Закупки с https://etp.comita.ru/, коммерческие')
+    .set('TendersZmoKursk', 'Закупки с https://zmokursk.rts-tender.ru/, все')
+    .set('TendersZmo45', 'Закупки с https://zmo-g45.rts-tender.ru/, все')
+    .set('TendersZmoKurgan', 'Закупки с https://kurgan-med-zmo.rts-tender.ru/, все')
+    .set('TendersZmoChel', 'Закупки с https://chelyabinskmarket-app.rts-tender.ru/, все');
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])

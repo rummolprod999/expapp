@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 let fun = require('./fun_tools');
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const slowRoutes = require('./routes/slow');
 const tendersRouter = require('./routes/tenders');
 const graphRouter = require('./routes/graph');
 
@@ -14,6 +14,7 @@ const hbs = require("hbs");
 hbs.registerHelper('getTenCounts', fun.getTenCounts);
 hbs.registerHelper('GetTenList', fun.GetTenList);
 hbs.registerHelper('getFile', fun.getFile);
+hbs.registerHelper('getFileLog', fun.getFileLog);
 hbs.registerHelper('getGraph', fun.getGraph);
 hbs.registerHelper('getGraphA', fun.getGraphA);
 hbs.registerHelper('getDescription', fun.getDescription);
@@ -28,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/slow', slowRoutes);
 app.use('/tenders', tendersRouter);
 app.use('/graph', graphRouter);
 
