@@ -389,7 +389,10 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersZmoKursk', 'ParserKotlinNew/logdir_tenders_zmokursk')
     .set('TendersZmo45', 'ParserKotlinNew/logdir_tenders_zmo45')
     .set('TendersZmoKurgan', 'ParserKotlinNew/logdir_tenders_zmokurgan')
-    .set('TendersZmoChel', 'ParserKotlinNew/logdir_tenders_zmochel');
+    .set('TendersZmoChel', 'ParserKotlinNew/logdir_tenders_zmochel')
+    .set('TendersTransAst', 'ParserKotlinNew/logdir_tenders_transast')
+    .set('TendersAgEat', 'ParserKotlinNew/logdir_tenders_ageat')
+    .set('TendersEshopRzd', 'ParserWebFSharp/log_tenders_eshoprzd');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -509,7 +512,10 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersZmoKursk', 'Закупки с https://zmokursk.rts-tender.ru/, все')
     .set('TendersZmo45', 'Закупки с https://zmo-g45.rts-tender.ru/, все')
     .set('TendersZmoKurgan', 'Закупки с https://kurgan-med-zmo.rts-tender.ru/, все')
-    .set('TendersZmoChel', 'Закупки с https://chelyabinskmarket-app.rts-tender.ru/, все');
+    .set('TendersZmoChel', 'Закупки с https://chelyabinskmarket-app.rts-tender.ru/, все')
+    .set('TendersTransAst', 'Закупки с http://utp.sberbank-ast.ru/Transneft/List/PurchaseList, коммерческие')
+    .set('TendersAgEat', 'Закупки с https://agregatoreat.ru/, все')
+    .set('TendersEshopRzd', 'Закупки с https://eshoprzd.ru/, все');
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
