@@ -395,7 +395,11 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersEshopRzd', 'ParserWebFSharp/log_tenders_eshoprzd')
     .set('TendersYarRegion', 'ParserWebFSharp/log_tenders_yarregion')
     .set('TendersBtg', 'ParserWebFSharp/log_tenders_btg')
-    .set('TendersVend', 'ParserWebFSharp/log_tenders_vend');
+    .set('TendersVend', 'ParserWebFSharp/log_tenders_vend')
+    .set('TendersDtek', 'ParserWebGo/log_dtek')
+    .set('TendersNaftan', 'ParserWebCore/log_naftan')
+    .set('TendersMmk', 'ParserWebGo/log_mmk')
+    .set('TendersLetoile', 'ParserWebGo/log_letoile');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -521,7 +525,11 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersEshopRzd', 'Закупки с https://eshoprzd.ru/, все')
     .set('TendersYarRegion', 'Закупки с http://zakupki.yarregion.ru/, все')
     .set('TendersBtg', 'Закупки с http://www.btg.by/, все')
-    .set('TendersVend', 'Закупки с http://vendorportal.ru/, все');
+    .set('TendersVend', 'Закупки с http://vendorportal.ru/, все')
+    .set('TendersDtek', 'Закупки с https://tenders.dtek.com/, все')
+    .set('TendersNaftan', 'Закупки с http://www.naftan.by/, все')
+    .set('TendersMmk', 'Закупки с http://mmk.ru/, все')
+    .set('TendersLetoile', 'Закупки с http://b2b.letoile.ru/, все');
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
