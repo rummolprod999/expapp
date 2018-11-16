@@ -399,7 +399,14 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersDtek', 'ParserWebGo/log_dtek')
     .set('TendersNaftan', 'ParserWebCore/log_naftan')
     .set('TendersMmk', 'ParserWebGo/log_mmk')
-    .set('TendersLetoile', 'ParserWebGo/log_letoile');
+    .set('TendersLetoile', 'ParserWebGo/log_letoile')
+    .set('TendersSistema', 'ParserWebGo/log_sistema')
+    .set('TendersMetafrax', 'ParserWebGo/log_metafrax')
+    .set('TendersIes', 'ParserWebGo/log_ies')
+    .set('TendersUralChem', 'ParserWebGo/log_uralchem')
+    .set('TendersPik', 'ParserWebFSharp/log_tenders_pik')
+    .set('TendersGosZakaz', 'UnParserSelen/log_goszakaz')
+    .set('TendersNorNic', 'ParserWebFSharp/log_tenders_nornic');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -529,7 +536,14 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersDtek', 'Закупки с https://tenders.dtek.com/, все')
     .set('TendersNaftan', 'Закупки с http://www.naftan.by/, все')
     .set('TendersMmk', 'Закупки с http://mmk.ru/, все')
-    .set('TendersLetoile', 'Закупки с http://b2b.letoile.ru/, все');
+    .set('TendersLetoile', 'Закупки с http://b2b.letoile.ru/, все')
+    .set('TendersSistema', 'Закупки с http://www.sistema.ru/, все')
+    .set('TendersMetafrax', 'Закупки с http://metafrax.ru/, все')
+    .set('TendersIes', 'Закупки с http://zakupki.ies-holding.com/, все')
+    .set('TendersUralChem', 'Закупки с http://www.uralchem.ru/, все')
+    .set('TendersPik', 'Закупки с https://tender.pik.ru/, все')
+    .set('TendersGosZakaz', 'Закупки с http://goszakaz.by/, все')
+    .set('TendersNorNic', 'Закупки с https://www.nornickel.ru/, все');
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
