@@ -406,7 +406,9 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersUralChem', 'ParserWebGo/log_uralchem')
     .set('TendersPik', 'ParserWebFSharp/log_tenders_pik')
     .set('TendersGosZakaz', 'UnParserSelen/log_goszakaz')
-    .set('TendersNorNic', 'ParserWebFSharp/log_tenders_nornic');
+    .set('TendersNorNic', 'ParserWebFSharp/log_tenders_nornic')
+    .set('TendersRwBy', 'ParserWebCore/log_rwby')
+    .set('TendersTenderer', 'ParserWebFSharp/log_tenders_tenderer');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -543,7 +545,9 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersUralChem', 'Закупки с http://www.uralchem.ru/, все')
     .set('TendersPik', 'Закупки с https://tender.pik.ru/, все')
     .set('TendersGosZakaz', 'Закупки с http://goszakaz.by/, все')
-    .set('TendersNorNic', 'Закупки с https://www.nornickel.ru/, все');
+    .set('TendersNorNic', 'Закупки с https://www.nornickel.ru/, все')
+    .set('TendersRwBy', 'Закупки с https://www.rw.by/, все')
+    .set('TendersTenderer', 'Закупки с http://www.tenderer.ru/, коммерческие');
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
