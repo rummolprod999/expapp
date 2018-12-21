@@ -415,7 +415,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersKamgb', 'WebParserRust/logdir_kamgb')
     .set('TendersUds', 'WebParserRust/logdir_uds')
     .set('TendersBeeline', 'WebParserRust/logdir_beeline')
-    .set('TendersMegafon', 'WebParserRust/logdir_megafon');
+    .set('TendersMegafon', 'WebParserRust/logdir_megafon')
+    .set('TendersGosBy', 'ParserWebGo/log_gosby');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -561,7 +562,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersKamgb', 'Закупки с http://www.kamgb.ru/, все')
     .set('TendersUds', 'Закупки с http://uds-group.ru/, все')
     .set('TendersBeeline', 'Закупки с https://beeline.ru/, все')
-    .set('TendersMegafon', 'Закупки с http://corp.megafon.ru/, все');
+    .set('TendersMegafon', 'Закупки с http://corp.megafon.ru/, все')
+    .set('TendersGosBy', 'Закупки с http://www.goszakupki.by/, все');
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
