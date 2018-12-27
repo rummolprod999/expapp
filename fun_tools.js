@@ -416,7 +416,10 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersUds', 'WebParserRust/logdir_uds')
     .set('TendersBeeline', 'WebParserRust/logdir_beeline')
     .set('TendersMegafon', 'WebParserRust/logdir_megafon')
-    .set('TendersGosBy', 'ParserWebGo/log_gosby');
+    .set('TendersGosBy', 'ParserWebGo/log_gosby')
+    .set('TendersTekKom', 'ParserWebCore/log_tekkom')
+    .set('TendersTekMarket', 'ParserWebCore/log_tekmarket')
+    .set('TendersTekMos', 'ParserWebCore/log_tekmos');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -563,7 +566,10 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersUds', 'Закупки с http://uds-group.ru/, все')
     .set('TendersBeeline', 'Закупки с https://beeline.ru/, все')
     .set('TendersMegafon', 'Закупки с http://corp.megafon.ru/, все')
-    .set('TendersGosBy', 'Закупки с http://www.goszakupki.by/, все');
+    .set('TendersGosBy', 'Закупки с http://www.goszakupki.by/, все')
+    .set('TendersTekKom', 'Закупки с https://www.tektorg.ru/223-fz/procedures, все')
+    .set('TendersTekMarket', 'Закупки с https://www.tektorg.ru/market/procedures, все')
+    .set('TendersTekMos', 'Закупки с https://www.tektorg.ru/mosenergo/procedures, все');
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
