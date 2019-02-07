@@ -419,7 +419,17 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersGosBy', 'ParserWebGo/log_gosby')
     .set('TendersTekKom', 'ParserWebCore/log_tekkom')
     .set('TendersTekMarket', 'ParserWebCore/log_tekmarket')
-    .set('TendersTekMos', 'ParserWebCore/log_tekmos');
+    .set('TendersTekMos', 'ParserWebCore/log_tekmos')
+    .set('TendersAhstep', 'WebParserRust/logdir_ahstep')
+    .set('TendersSalavat1', 'WebParserRust/logdir_salavat')
+    .set('MlConformity', 'ParserWebCore/log_mlconf')
+    .set('TendersRTSRZD', 'ParserWebUniversal/log_rtsrzd')
+    .set('TendersRzn', 'ParserKotlinNew/logdir_tenders_rzn')
+    .set('TendersBrn', 'ParserKotlinNew/logdir_tenders_brn')
+    .set('TendersAriba', 'ParserWebFSharp/log_tenders_ariba')
+    .set('TendersZmoIvan', 'ParserKotlinNew/logdir_tenders_ivan')
+    .set('TendersZmoOrel', 'ParserKotlinNew/logdir_tenders_orel')
+    .set('TendersTekRn', 'ParserWebCore/log_tekrn');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -569,7 +579,17 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersGosBy', 'Закупки с http://www.goszakupki.by/, все')
     .set('TendersTekKom', 'Закупки с https://www.tektorg.ru/223-fz/procedures, все')
     .set('TendersTekMarket', 'Закупки с https://www.tektorg.ru/market/procedures, все')
-    .set('TendersTekMos', 'Закупки с https://www.tektorg.ru/mosenergo/procedures, все');
+    .set('TendersTekMos', 'Закупки с https://www.tektorg.ru/mosenergo/procedures, все')
+    .set('TendersAhstep', 'Закупки с https://ahstep.ru/tenders, все')
+    .set('TendersSalavat1', 'Закупки с http://gazpromss.ru/, все')
+    .set('MlConformity', 'Прогнозирование типа размещения тендера с использованием машинного обучения')
+    .set('TendersRTSRZD', 'Закупки с https://rzd.rts-tender.ru/, все')
+    .set('TendersRzn', 'Закупки с https://ryazanvitrinatorgov-app.rts-tender.ru/, все')
+    .set('TendersBrn', 'Закупки с https://zm-tender32.rts-tender.ru/, все')
+    .set('TendersAriba', 'https://service.ariba.com/, все')
+    .set('TendersZmoIvan', 'Закупки с https://ivanovobl-zmo.rts-tender.ru/, все')
+    .set('TendersZmoOrel', 'Закупки с https://zmo-orel.rts-tender.ru/, все')
+    .set('TendersTekRn', 'Закупки с https://www.tektorg.ru/rosneft/procedures/, все');
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
