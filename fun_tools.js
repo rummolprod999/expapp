@@ -429,7 +429,15 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersAriba', 'ParserWebFSharp/log_tenders_ariba')
     .set('TendersZmoIvan', 'ParserKotlinNew/logdir_tenders_ivan')
     .set('TendersZmoOrel', 'ParserKotlinNew/logdir_tenders_orel')
-    .set('TendersTekRn', 'ParserWebCore/log_tekrn');
+    .set('TendersTekRn', 'ParserWebCore/log_tekrn')
+    .set('TendersZmoNov', 'ParserKotlinNew/logdir_tenders_nov')
+    .set('TendersZmoKomi', 'ParserKotlinNew/logdir_tenders_komi')
+    .set('TendersZmoKalin', 'ParserKotlinNew/logdir_tenders_kalin')
+    .set('TendersZmoNen', 'ParserKotlinNew/logdir_tenders_nen')
+    .set('TendersZmoYalta', 'ParserKotlinNew/logdir_tenders_yalta')
+    .set('TendersZmoDag', 'ParserKotlinNew/logdir_tenders_dag')
+    .set('TendersZmoStav', 'ParserKotlinNew/logdir_tenders_stav')
+    .set('TendersZmoChuv', 'ParserKotlinNew/logdir_tenders_chuv');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -589,7 +597,15 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersAriba', 'https://service.ariba.com/, все')
     .set('TendersZmoIvan', 'Закупки с https://ivanovobl-zmo.rts-tender.ru/, все')
     .set('TendersZmoOrel', 'Закупки с https://zmo-orel.rts-tender.ru/, все')
-    .set('TendersTekRn', 'Закупки с https://www.tektorg.ru/rosneft/procedures/, все');
+    .set('TendersTekRn', 'Закупки с https://www.tektorg.ru/rosneft/procedures/, все')
+    .set('TendersZmoNov', 'Закупки с https://market-nov.rts-tender.ru/, все')
+    .set('TendersZmoKomi', 'Закупки с https://komimarket-app.rts-tender.ru/, все')
+    .set('TendersZmoKalin', 'Закупки с https://market.gov39.ru/, все')
+    .set('TendersZmoNen', 'Закупки с https://naomarket-app.rts-tender.ru/, все')
+    .set('TendersZmoYalta', 'Закупки с https://yalta-zmo.rts-tender.ru/, все')
+    .set('TendersZmoDag', 'Закупки с https://marketrd.rts-tender.ru/, все')
+    .set('TendersZmoStav', 'Закупки с https://stavzmo.rts-tender.ru/, все')
+    .set('TendersZmoChuv', 'Закупки с https://zmo21.rts-tender.ru/, все');
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
