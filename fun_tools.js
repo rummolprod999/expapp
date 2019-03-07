@@ -445,7 +445,12 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersZmoSurgut', 'ParserKotlinNew/logdir_tenders_surgut')
     .set('TendersZmoMagnit', 'ParserKotlinNew/logdir_tenders_magnit')
     .set('TendersZmoOmsk', 'ParserKotlinNew/logdir_tenders_omsk')
-    .set('TendersZmoOmskObl', 'ParserKotlinNew/logdir_tenders_omskobl');
+    .set('TendersZmoOmskObl', 'ParserKotlinNew/logdir_tenders_omskobl')
+    .set('TendersZmoIrkObl', 'ParserKotlinNew/logdir_tenders_irkobl')
+    .set('TendersZmoAltay', 'ParserKotlinNew/logdir_tenders_altay')
+    .set('TendersZmoHakas', 'ParserKotlinNew/logdir_tenders_hakas')
+    .set('TendersZmoZabay', 'ParserKotlinNew/logdir_tenders_zabay')
+    .set('TendersZmoNovosib', 'ParserKotlinNew/logdir_tenders_novosib');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -621,7 +626,12 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersZmoSurgut', 'Закупки с https://admsr-zmo.rts-tender.ru/, все')
     .set('TendersZmoMagnit', 'Закупки с https://magnitogorskmarket.rts-tender.ru/, все')
     .set('TendersZmoOmsk', 'Закупки с https://zmo-omsk.rts-tender.ru/, все')
-    .set('TendersZmoOmskObl', 'Закупки с https://zmo-omskobl.rts-tender.ru/, все');
+    .set('TendersZmoOmskObl', 'Закупки с https://zmo-omskobl.rts-tender.ru/, все')
+    .set('TendersZmoIrkObl', 'Закупки с https://irkoblmarket.rts-tender.ru/, все')
+    .set('TendersZmoAltay', 'Закупки с https://zmo04.rts-tender.ru/, все')
+    .set('TendersZmoHakas', 'Закупки с https://zmo19.rts-tender.ru/, все')
+    .set('TendersZmoZabay', 'Закупки с https://zmo-zab.rts-tender.ru/, все')
+    .set('TendersZmoNovosib', 'Закупки с https://novobl-zmo.rts-tender.ru/, все');
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
