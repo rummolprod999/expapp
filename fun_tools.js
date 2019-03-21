@@ -1,5 +1,10 @@
 let fs = require('fs');
 const hbs = require("hbs");
+const file_log = "message_log.log"
+
+function write_to_log(message) {
+    fs.appendFileSync(file_log, message)
+}
 
 function getGraphAll(dir_name) {
     let dk = [];
@@ -23,8 +28,7 @@ function getGraphAll(dir_name) {
         if (dateParts[2].length === 4) {
             let ddd = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
             dates.push(ddd);
-        }
-        else {
+        } else {
             dates.push(date);
         }
         let countsAdded = getAddedFromFile(`${dir}/${f}`);
@@ -33,21 +37,21 @@ function getGraphAll(dir_name) {
         updated.push(countsUpdates);
     }
     let obb = [];
-    for (let i = 0; i < added[0].length; i++) {
-        let temp = [];
-        let add = [];
-        for (let j = 0; j < added.length; j++) {
-            temp.push(added[j][i]);
-            if (updated[j][i]) {
-                add.push(updated[j][i])
+    if (added.length > 0) {
+        for (let i = 0; i < added[0].length; i++) {
+            let temp = [];
+            let add = [];
+            for (let j = 0; j < added.length; j++) {
+                temp.push(added[j][i]);
+                if (updated[j][i]) {
+                    add.push(updated[j][i])
+                } else {
+                    add.push({})
+                }
             }
-            else {
-                add.push({})
-            }
+            obb.push({dates: dates, counts: temp, added: add})
         }
-        obb.push({dates: dates, counts: temp, added: add})
     }
-
     return obb
 }
 
@@ -60,16 +64,14 @@ module.exports.getGraph = function (dir_name) {
         for (let ccc of a[i].counts) {
             if (ccc) {
                 cc.push(ccc.count)
-            }
-            else {
+            } else {
                 cc.push(0)
             }
         }
         for (let ccc of a[i].added) {
             if (ccc.count) {
                 dd.push(ccc.count)
-            }
-            else {
+            } else {
                 dd.push(0)
             }
         }
@@ -78,14 +80,14 @@ module.exports.getGraph = function (dir_name) {
     TESTER${i} = document.getElementById('tester${i}');
     var trace1 = {
   x: ${JSON.stringify(a[i].dates)},
-  y: ${JSON.stringify(cc) },
+  y: ${JSON.stringify(cc)},
   name: 'Добавили',
   type: 'bar'
 };
 
 var trace2 = {
   x: ${JSON.stringify(a[i].dates)},
-  y: ${JSON.stringify(dd) },
+  y: ${JSON.stringify(dd)},
   name: 'Обновили',
   type: 'bar'
 };
@@ -112,16 +114,14 @@ module.exports.getGraphA = function () {
             for (let ccc of a[i].counts) {
                 if (ccc) {
                     cc.push(ccc.count)
-                }
-                else {
+                } else {
                     cc.push(0)
                 }
             }
             for (let ccc of a[i].added) {
                 if (ccc.count) {
                     dd.push(ccc.count)
-                }
-                else {
+                } else {
                     dd.push(0)
                 }
             }
@@ -130,14 +130,14 @@ module.exports.getGraphA = function () {
     TESTER${i}_${d[0]} = document.getElementById('tester${i}_${d[0]}');
     var trace1 = {
   x: ${JSON.stringify(a[i].dates)},
-  y: ${JSON.stringify(cc) },
+  y: ${JSON.stringify(cc)},
   name: 'Добавили',
   type: 'bar'
 };
 
 var trace2 = {
   x: ${JSON.stringify(a[i].dates)},
-  y: ${JSON.stringify(dd) },
+  y: ${JSON.stringify(dd)},
   name: 'Обновили',
   type: 'bar'
 };
@@ -241,8 +241,7 @@ function getAddedFromFile(s) {
         let index = ob_list.findIndex(x => x.name === free_string);
         if (index === -1) {
             ob_list.push({name: free_string, count: Number(match[1])});
-        }
-        else {
+        } else {
             ob_list[index] = {name: free_string, count: ob_list[index].count + Number(match[1])}
         }
     }
@@ -260,8 +259,7 @@ function getUpdatedFromFile(s) {
         let index = ob_list.findIndex(x => x.name === free_string);
         if (index === -1) {
             ob_list.push({name: free_string, count: Number(match[1])});
-        }
-        else {
+        } else {
             ob_list[index] = {name: free_string, count: ob_list[index].count + Number(match[1])}
         }
     }
@@ -654,13 +652,14 @@ let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
 }
-function get_description(key){
-    if(map_description.has(key)){
+
+function get_description(key) {
+    if (map_description.has(key)) {
         return map_description.get(key)
-    }
-    else{
+    } else {
         return ""
     }
 }
+
 module.exports.getDescription = get_description;
 module.exports.tenders = export_map;
