@@ -457,7 +457,9 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersZmoTuva', 'ParserKotlinNew/logdir_tenders_tuva')
     .set('TendersZmoGzalt', 'ParserKotlinNew/logdir_tenders_gzalt')
     .set('TendersZmoAmurObl', 'ParserKotlinNew/logdir_tenders_amurobl')
-    .set('TendersZmoDvrt', 'ParserKotlinNew/logdir_tenders_dvrt');
+    .set('TendersZmoDvrt', 'ParserKotlinNew/logdir_tenders_dvrt')
+    .set('TendersAlrosa', 'ParserKotlinNew/logdir_tenders_alrosa')
+    .set('TendersFromEIS44', 'ParserTenders/log_tenders_web44');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -489,7 +491,7 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersTektorgInterRao', 'Закупки с https://www.tektorg.ru/interao/, коммерческие')
     .set('TendersTektorgRZD', 'Закупки с https://www.tektorg.ru/rzd/, коммерческие')
     .set('Tenders615', 'Закупки с http://zakupki.gov.ru/, ФЗ 615')
-    .set('TendersFromEIS', 'Закупки с Web-версии http://zakupki.gov.ru/, ФЗ 223, 44')
+    .set('TendersFromEIS', 'Закупки с Web-версии http://zakupki.gov.ru/, ФЗ 223')
     .set('TendersUkr', 'Закупки с https://прозорро.укр/')
     .set('Complaint44', 'Жалобы с http://zakupki.gov.ru/, ФЗ 44')
     .set('ComplaintResult44', 'Результаты жалоб с http://zakupki.gov.ru/, ФЗ 44')
@@ -647,7 +649,10 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersZmoTuva', 'Закупки с https://tuva-zmo.rts-tender.ru/, все')
     .set('TendersZmoGzalt', 'Закупки с https://gzalt.rts-tender.ru/, все')
     .set('TendersZmoAmurObl', 'Закупки с https://zmo-amurobl.rts-tender.ru/, все')
-    .set('TendersZmoDvrt', 'Закупки с https://zmodvrt.rts-tender.ru/, все');
+    .set('TendersZmoDvrt', 'Закупки с https://zmodvrt.rts-tender.ru/, все')
+    .set('TendersAlrosa', 'Закупки с https://zakupki.alrosa.ru/, все')
+    .set('TendersFromEIS44', 'Закупки с Web-версии http://zakupki.gov.ru/, ФЗ 44, 504');
+
 let export_map = [];
 for (let m of map) {
     export_map.push([m[0], `${dir_prefix}${m[1]}`])
