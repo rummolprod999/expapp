@@ -459,7 +459,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersZmoAmurObl', 'ParserKotlinNew/logdir_tenders_amurobl')
     .set('TendersZmoDvrt', 'ParserKotlinNew/logdir_tenders_dvrt')
     .set('TendersAlrosa', 'ParserKotlinNew/logdir_tenders_alrosa')
-    .set('TendersFromEIS44', 'ParserTenders/log_tenders_web44');
+    .set('TendersFromEIS44', 'ParserTenders/log_tenders_web44')
+    .set('SignProj44', 'ParserTenders/log_sign_proj44');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -651,7 +652,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersZmoAmurObl', 'Закупки с https://zmo-amurobl.rts-tender.ru/, все')
     .set('TendersZmoDvrt', 'Закупки с https://zmodvrt.rts-tender.ru/, все')
     .set('TendersAlrosa', 'Закупки с https://zakupki.alrosa.ru/, все')
-    .set('TendersFromEIS44', 'Закупки с Web-версии http://zakupki.gov.ru/, ФЗ 44, 504');
+    .set('TendersFromEIS44', 'Закупки с Web-версии http://zakupki.gov.ru/, ФЗ 44, 504')
+    .set('SignProj44', 'Подписанные контракты с http://zakupki.gov.ru/, ФЗ 44');
 
 let export_map = [];
 for (let m of map) {
