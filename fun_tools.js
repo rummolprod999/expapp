@@ -1,6 +1,7 @@
 let fs = require('fs');
 const hbs = require("hbs");
-const file_log = "message_log.log"
+const moment = require("moment");
+const file_log = "message_log.log";
 
 function write_to_log(message) {
     fs.appendFileSync(file_log, message)
@@ -22,6 +23,7 @@ function getGraphAll(dir_name) {
     let added = [];
     let updated = [];
     let dates = [];
+    let diff_dates = [];
     for (let f of dir_list) {
         let date = getDateFromString(f);
         let dateParts = date.split("-");
@@ -33,8 +35,10 @@ function getGraphAll(dir_name) {
         }
         let countsAdded = getAddedFromFile(`${dir}/${f}`);
         let countsUpdates = getUpdatedFromFile(`${dir}/${f}`);
+        let diffs = getDiff(`${dir}/${f}`);
         added.push(countsAdded);
         updated.push(countsUpdates);
+        diff_dates.push(diffs)
     }
     let obb = [];
     if (added.length > 0) {
@@ -49,7 +53,7 @@ function getGraphAll(dir_name) {
                     add.push({})
                 }
             }
-            obb.push({dates: dates, counts: temp, added: add})
+            obb.push({dates: dates, counts: temp, added: add, diff_dates: diff_dates})
         }
     }
     return obb
@@ -58,6 +62,22 @@ function getGraphAll(dir_name) {
 module.exports.getGraph = function (dir_name) {
     let a = getGraphAll(dir_name);
     let result = "";
+    if (a.length > 0) {
+        result += `<div>Время парсинга по дням, в минутах</div><div id="tester_time_parsing" style="width:800px;height:350px;"></div>
+<script>
+    TESTER_TP = document.getElementById('tester_time_parsing');
+    var trace1 = {
+  x: ${JSON.stringify(a[0].dates)},
+  y: ${JSON.stringify(a[0].diff_dates)},
+  name: 'Время, в минутах',
+  type: 'bar'
+};
+var data = [trace1];
+var layout = {barmode: 'stack'};
+
+Plotly.newPlot(TESTER_TP, data, layout);
+</script>`
+    }
     for (let i = 0; i < a.length; i++) {
         let cc = [];
         let dd = [];
@@ -99,6 +119,7 @@ var layout = {barmode: 'stack'};
 Plotly.newPlot(TESTER${i}, data, layout);
 </script>`
     }
+
     return new hbs.SafeString(result)
 };
 
@@ -229,6 +250,33 @@ function getCountFromFile(s) {
     let reg = /(Добав(или|лено)|Обнов(лено|или)) .* (\d+)/gm;
     return ftext.match(reg) || []
 
+}
+
+function getDiff(s) {
+    let diff = 0;
+    try {
+        let ftext = fs.readFileSync(s, "utf8");
+        let reg = /\d+\/\d+\/\d+\s+\d+:\d+:\d+/gm;
+        let result = ftext.match(reg);
+        if (result == null) {
+            reg = /\d+-\d+-\d+\s+\d+:\d+:\d+/gm;
+            result = ftext.match(reg);
+        }
+        if (result == null) {
+            reg = /\d+.\d+.\d+\s+\d+:\d+:\d+/gm;
+            result = ftext.match(reg);
+        }
+        if (result == null) {
+            return null
+        }
+        let first_time = result[0];
+        let last_time = result[result.length - 1];
+        let ftime = moment(first_time, undefined, false);
+        let lasttime = moment(last_time, undefined, false);
+        diff = lasttime.diff(ftime) / 1000 / 60;
+    } catch (e) {
+    }
+    return diff
 }
 
 function getAddedFromFile(s) {
