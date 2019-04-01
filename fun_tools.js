@@ -103,6 +103,11 @@ var layout = {barmode: 'stack'};
 Plotly.newPlot(TESTER${i}, data, layout);
 </script>`
     }
+    return new hbs.SafeString(result)
+};
+module.exports.getGraphTimeParsing = function (dir_name) {
+    let a = getGraphAll(dir_name);
+    let result = "";
     if (a.length > 0) {
         result += `<div>Время парсинга по дням, в минутах</div><div id="tester_time_parsing" style="width:800px;height:350px;"></div>
 <script>
@@ -121,7 +126,6 @@ Plotly.newPlot(TESTER_TP, data, layout);
     }
     return new hbs.SafeString(result)
 };
-
 module.exports.getGraphA = function () {
     let result = "";
     for (let d of export_map) {
@@ -227,7 +231,8 @@ module.exports.GetTenList = function (dir_l) {
     result += `<p>Тип парсера: <strong>${dir_l[0]}</strong></p>`;
     result += `<p>Площадка: <strong>${get_description(dir_l[0])}</strong></p>`;
     result += `<p>Смотреть отчеты: <a href='/tenders/${dir_l[0]}'>${dir_l[0]}</a></p>`;
-    result += `<p>Смотреть графики загрузки: <a href='/graph/${dir_l[0]}'>${dir_l[0]}</a></p><br></p>`;
+    result += `<p>Смотреть графики загрузки: <a href='/graph/${dir_l[0]}'>${dir_l[0]}</a></p><br></p>`
+    result += `<p>Смотреть графики времени работы парсеров: <a href='/graph/timep/${dir_l[0]}'>${dir_l[0]}</a></p><br></p>`;
     return new hbs.SafeString(result)
 };
 
@@ -283,12 +288,15 @@ function getDiff(s) {
 }
 
 function parsing_date(dt) {
-    let date = moment(dt, undefined, false);
+    let date = moment(dt, "DD.MM.YYYY hh:mm:ss");
     if (!date.isValid()) {
         date = moment(dt, "MMM DD hh:mm:ss ZZ YYYY");
     }
     if (!date.isValid()) {
         date = moment(dt, "DD.MM.YY hh:mm:ss");
+    }
+    if (!date.isValid()) {
+        date = moment(dt, undefined, false);
     }
     return date
 }

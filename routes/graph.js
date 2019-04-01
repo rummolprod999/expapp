@@ -5,6 +5,10 @@ router.get('/:tenderType', function(req, res, next) {
     let tenType = req.params['tenderType'];
     res.render('graph', { title: `График полученных и обновленных документов ${tenType}`, tenderT: tenType});
 });
+router.get('/timep/:tenderType', function(req, res, next) {
+    let tenType = req.params['tenderType'];
+    res.render('graphtimep', { title: `График времени работы парсера по дням, ${tenType}`, tenderT: tenType});
+});
 router.get('/', function(req, res, next) {
     res.render('graphall', { title: `Все графики полученных и обновленных документов`});
 });

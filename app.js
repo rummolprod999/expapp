@@ -16,6 +16,7 @@ hbs.registerHelper('GetTenList', fun.GetTenList);
 hbs.registerHelper('getFile', fun.getFile);
 hbs.registerHelper('getFileLog', fun.getFileLog);
 hbs.registerHelper('getGraph', fun.getGraph);
+hbs.registerHelper('getGraphTimeParsing', fun.getGraphTimeParsing);
 hbs.registerHelper('getGraphA', fun.getGraphA);
 hbs.registerHelper('getDescription', fun.getDescription);
 // view engine setup

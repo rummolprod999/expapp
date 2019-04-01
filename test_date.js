@@ -35,24 +35,23 @@ function getDiff(ftext) {
 }
 
 function parsing_date(dt) {
-    let date = moment(dt, undefined, false);
+    let date = moment(dt, "DD.MM.YYYY hh:mm:ss");
     if (!date.isValid()) {
         date = moment(dt, "MMM DD hh:mm:ss ZZ YYYY");
     }
     if (!date.isValid()) {
         date = moment(dt, "DD.MM.YY hh:mm:ss");
     }
+    if (!date.isValid()) {
+        date = moment(dt, undefined, false);
+    }
     return date
 }
 
-let str = "Fri Mar 29 12:45:44 MSK 2019 Начало парсинга\n" +
-    "Fri Mar 29 12:45:55 MSK 2019 Добавили тендеров 100\n" +
-    "Fri Mar 29 12:45:55 MSK 2019 Обновили тендеров 0\n" +
-    "Fri Mar 29 12:45:55 MSK 2019 Конец парсинга\n" +
-    "Fri Mar 29 23:28:31 MSK 2019 Начало парсинга\n" +
-    "Fri Mar 29 23:28:35 MSK 2019 Добавили тендеров 12\n" +
-    "Fri Mar 29 23:28:35 MSK 2019 Обновили тендеров 0\n" +
-    "Fri Mar 29 23:28:35 MSK 2019 Конец парсинга";
+let str = "﻿30.03.2019 9:33:05 Начало парсинга\n" +
+    "30.03.2019 10:09:55 Конец парсинга\n" +
+    "30.03.2019 10:09:55 Добавили тендеров 4289\n" +
+    "30.03.2019 10:09:55 Обновили тендеров 7628";
 
 let res = getDiff(str);
 console.log(res);
