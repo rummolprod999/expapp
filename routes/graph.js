@@ -7,7 +7,7 @@ router.get('/:tenderType', function(req, res, next) {
 });
 router.get('/timep/:tenderType', function(req, res, next) {
     let tenType = req.params['tenderType'];
-    res.render('graphtimep', { title: `График времени работы парсера по дням, ${tenType}`, tenderT: tenType});
+    res.render('graphtimep', { title: `Графики времени работы парсера по дням, ${tenType}`, tenderT: tenType});
 });
 router.get('/', function(req, res, next) {
     res.render('graphall', { title: `Все графики полученных и обновленных документов`});

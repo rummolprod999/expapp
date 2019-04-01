@@ -277,8 +277,8 @@ function getDiff(s) {
         if (result == null) {
             return 0
         }
-        let first_time = result[0];
-        let last_time = result[result.length - 1];
+        let first_time = result[0].replace(" MSK", "");
+        let last_time = result[result.length - 1].replace(" MSK", "");
         let ftime = parsing_date(first_time);
         let lasttime = parsing_date(last_time);
         diff = lasttime.diff(ftime) / 1000 / 60;
@@ -288,12 +288,36 @@ function getDiff(s) {
 }
 
 function parsing_date(dt) {
-    let date = moment(dt, "DD.MM.YYYY hh:mm:ss");
+    let date = moment(dt, "DD.MM.YYYY hh:mm:ss", true);
     if (!date.isValid()) {
-        date = moment(dt, "MMM DD hh:mm:ss ZZ YYYY");
+        date = moment(dt, "DD.MM.YYYY HH:mm:ss", true);
     }
     if (!date.isValid()) {
-        date = moment(dt, "DD.MM.YY hh:mm:ss");
+        date = moment(dt, "DD.MM.YY hh:mm:ss", true);
+    }
+    if (!date.isValid()) {
+        date = moment(dt, "DD.MM.YY HH:mm:ss", true);
+    }
+    if (!date.isValid()) {
+        date = moment(dt, "DD.MM.YY h:mm:ss", true);
+    }
+    if (!date.isValid()) {
+        date = moment(dt, "DD.MM.YY H:mm:ss", true);
+    }
+    if (!date.isValid()) {
+        date = moment(dt, "DD.MM.YYYY h:mm:ss", true);
+    }
+    if (!date.isValid()) {
+        date = moment(dt, "DD.MM.YYYY H:mm:ss", true);
+    }
+    if (!date.isValid()) {
+        date = moment(dt, "MM/DD/YYYY hh:mm:ss", true);
+    }
+    if (!date.isValid()) {
+        date = moment(dt, "MM/DD/YYYY HH:mm:ss", true);
+    }
+    if (!date.isValid()) {
+        date = moment(dt, "MMM DD hh:mm:ss YYYY", true);
     }
     if (!date.isValid()) {
         date = moment(dt, undefined, false);
