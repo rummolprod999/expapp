@@ -266,6 +266,10 @@ function getDiff(s) {
             result = ftext.match(reg);
         }
         if (result == null) {
+            reg = /\b\w{3}\s\d+.+MSK\s\d{4}/gm;
+            result = ftext.match(reg);
+        }
+        if (result == null) {
             return 0
         }
         let first_time = result[0];
@@ -280,6 +284,9 @@ function getDiff(s) {
 
 function parsing_date(dt) {
     let date = moment(dt, undefined, false);
+    if (!date.isValid()) {
+        date = moment(dt, "MMM DD hh:mm:ss ZZ YYYY");
+    }
     if (!date.isValid()) {
         date = moment(dt, "DD.MM.YY hh:mm:ss");
     }
