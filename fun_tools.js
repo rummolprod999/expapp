@@ -266,16 +266,24 @@ function getDiff(s) {
             result = ftext.match(reg);
         }
         if (result == null) {
-            return null
+            return 0
         }
         let first_time = result[0];
         let last_time = result[result.length - 1];
-        let ftime = moment(first_time, undefined, false);
-        let lasttime = moment(last_time, undefined, false);
+        let ftime = parsing_date(first_time);
+        let lasttime = parsing_date(last_time);
         diff = lasttime.diff(ftime) / 1000 / 60;
     } catch (e) {
     }
     return diff
+}
+
+function parsing_date(dt) {
+    let date = moment(dt, undefined, false);
+    if (!date.isValid()) {
+        date = moment(dt, "DD.MM.YY hh:mm:ss");
+    }
+    return date
 }
 
 function getAddedFromFile(s) {
