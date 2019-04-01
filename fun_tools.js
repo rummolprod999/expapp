@@ -62,22 +62,6 @@ function getGraphAll(dir_name) {
 module.exports.getGraph = function (dir_name) {
     let a = getGraphAll(dir_name);
     let result = "";
-    if (a.length > 0) {
-        result += `<div>Время парсинга по дням, в минутах</div><div id="tester_time_parsing" style="width:800px;height:350px;"></div>
-<script>
-    TESTER_TP = document.getElementById('tester_time_parsing');
-    var trace1 = {
-  x: ${JSON.stringify(a[0].dates)},
-  y: ${JSON.stringify(a[0].diff_dates)},
-  name: 'Время, в минутах',
-  type: 'bar'
-};
-var data = [trace1];
-var layout = {barmode: 'stack'};
-
-Plotly.newPlot(TESTER_TP, data, layout);
-</script>`
-    }
     for (let i = 0; i < a.length; i++) {
         let cc = [];
         let dd = [];
@@ -119,7 +103,22 @@ var layout = {barmode: 'stack'};
 Plotly.newPlot(TESTER${i}, data, layout);
 </script>`
     }
+    if (a.length > 0) {
+        result += `<div>Время парсинга по дням, в минутах</div><div id="tester_time_parsing" style="width:800px;height:350px;"></div>
+<script>
+    TESTER_TP = document.getElementById('tester_time_parsing');
+    var trace1 = {
+  x: ${JSON.stringify(a[0].dates)},
+  y: ${JSON.stringify(a[0].diff_dates)},
+  name: 'Время, в минутах',
+  type: 'bar'
+};
+var data = [trace1];
+var layout = {barmode: 'stack'};
 
+Plotly.newPlot(TESTER_TP, data, layout);
+</script>`
+    }
     return new hbs.SafeString(result)
 };
 
