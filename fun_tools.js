@@ -275,10 +275,18 @@ function getDiff(s) {
             result = ftext.match(reg);
         }
         if (result == null) {
+            reg = /\b\w{3}\s\d+.+GMT\s\d{4}/gm;
+            result = ftext.match(reg);
+        }
+        if (result == null) {
+            reg = /\d{4}-\d{2}-\d{2}T\d+:\d+:\d+/gm;
+            result = ftext.match(reg);
+        }
+        if (result == null) {
             return 0
         }
-        let first_time = result[0].replace(" MSK", "");
-        let last_time = result[result.length - 1].replace(" MSK", "");
+        let first_time = result[0].replace(" MSK", "").replace(" GMT", "");
+        let last_time = result[result.length - 1].replace(" MSK", "").replace(" GMT", "");
         let ftime = parsing_date(first_time);
         let lasttime = parsing_date(last_time);
         diff = lasttime.diff(ftime) / 1000 / 60;
@@ -318,6 +326,9 @@ function parsing_date(dt) {
     }
     if (!date.isValid()) {
         date = moment(dt, "MMM DD hh:mm:ss YYYY", true);
+    }
+    if (!date.isValid()) {
+        date = moment(dt, "MMM DD HH:mm:ss YYYY", true);
     }
     if (!date.isValid()) {
         date = moment(dt, undefined, false);
