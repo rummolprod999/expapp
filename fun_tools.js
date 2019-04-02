@@ -24,6 +24,7 @@ function getGraphAll(dir_name) {
     let updated = [];
     let dates = [];
     let diff_dates = [];
+    let mtimes = [];
     for (let f of dir_list) {
         let date = getDateFromString(f);
         let dateParts = date.split("-");
@@ -36,9 +37,11 @@ function getGraphAll(dir_name) {
         let countsAdded = getAddedFromFile(`${dir}/${f}`);
         let countsUpdates = getUpdatedFromFile(`${dir}/${f}`);
         let diffs = getDiff(`${dir}/${f}`);
+        let mtm = getLastModif(`${dir}/${f}`);
         added.push(countsAdded);
         updated.push(countsUpdates);
-        diff_dates.push(diffs)
+        diff_dates.push(diffs);
+        mtimes.push(mtm)
     }
     let obb = [];
     if (added.length > 0) {
@@ -53,7 +56,7 @@ function getGraphAll(dir_name) {
                     add.push({})
                 }
             }
-            obb.push({dates: dates, counts: temp, added: add, diff_dates: diff_dates})
+            obb.push({dates: dates, counts: temp, added: add, diff_dates: diff_dates, mtimes: mtimes});
         }
     }
     return obb
@@ -122,6 +125,22 @@ var data = [trace1];
 var layout = {barmode: 'stack'};
 
 Plotly.newPlot(TESTER_TP, data, layout);
+</script>`
+    }
+    if (a.length > 0) {
+        result += `<div>Время последнего доступа к файлу лога, в часах с начала дня</div><div id="tester_last_time" style="width:800px;height:350px;"></div>
+<script>
+    TESTER_M = document.getElementById('tester_last_time');
+    var trace2 = {
+  x: ${JSON.stringify(a[0].dates)},
+  y: ${JSON.stringify(a[0].mtimes)},
+  name: 'Время',
+  type: 'bar'
+};
+var datam = [trace2];
+var layoutm = {barmode: 'stack'};
+
+Plotly.newPlot(TESTER_M, datam, layoutm);
 </script>`
     }
     return new hbs.SafeString(result)
@@ -334,6 +353,11 @@ function parsing_date(dt) {
         date = moment(dt, undefined, false);
     }
     return date
+}
+
+function getLastModif(file) {
+    let stat = fs.statSync(file);
+    return stat.mtime.getHours() + stat.mtime.getMinutes()/60 + stat.mtime.getSeconds()/(60*60)
 }
 
 function getAddedFromFile(s) {
