@@ -593,7 +593,11 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersAfkAst', 'ParserKotlinNew/logdir_tenders_afkast')
     .set('TendersNorNic1', 'WebParserRust/logdir_nornic')
     .set('PContr223', 'ParserFSharpN/logdir_Pcotntr223')
-    .set('TendersApk', 'ParserWebGo/log_apk');
+    .set('TendersApk', 'ParserWebGo/log_apk')
+    .set('TendersPewete', 'WebParserRust/logdir_pewete')
+    .set('TendersQuadra', 'WebParserRust/logdir_quadra')
+    .set('TendersTsm', 'ParserWebFSharp/log_tenders_tsm')
+    .set('TendersTmk', 'ParserKotlinNew/logdir_tenders_tmk');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -790,7 +794,11 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersAfkAst', 'Закупки с http://utp.sberbank-ast.ru/AFK/List/PurchaseList/, коммерческие')
     .set('TendersNorNic1', 'Закупки с http://www.zf.norilsknickel.ru/, все')
     .set('PContr223', 'Договора с  http://zakupki.gov.ru/, ФЗ 223')
-    .set('TendersApk', 'Закупки с http://tender-apk.ru/, все');
+    .set('TendersApk', 'Закупки с http://tender-apk.ru/, все')
+    .set('TendersPewete', 'Закупки с http://tender.pewete.com/, все')
+    .set('TendersQuadra', 'Закупки с https://trade.quadra.ru/, все')
+    .set('TendersTsm', 'Закупки с https://tender.tsm.ru/, все')
+    .set('TendersTmk', 'Закупки с https://zakupki.tmk-group.com/, все');
 
 let export_map = [];
 for (let m of map) {
