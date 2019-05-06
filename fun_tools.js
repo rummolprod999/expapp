@@ -599,7 +599,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersTsm', 'ParserWebFSharp/log_tenders_tsm')
     .set('TendersTmk', 'ParserKotlinNew/logdir_tenders_tmk')
     .set('PlanGraph44', 'ParserTenderPlan/log_plan44')
-    .set('TendersTgk14', 'WebParserRust/logdir_tgk14');
+    .set('TendersTgk14', 'WebParserRust/logdir_tgk14')
+    .set('TendersAztpa', 'ParserWebGo/log_aztpa');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -802,7 +803,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersTsm', 'Закупки с https://tender.tsm.ru/, все')
     .set('TendersTmk', 'Закупки с https://zakupki.tmk-group.com/, все')
     .set('PlanGraph44', 'План-графики с http://zakupki.gov.ru/, ФЗ 44')
-    .set('TendersTgk14', 'Закупки с https://www.tgk-14.com/, все');
+    .set('TendersTgk14', 'Закупки с https://www.tgk-14.com/, все')
+    .set('TendersAztpa', 'Закупки с https://zakupki.aztpa.ru/, все');
 
 let export_map = [];
 for (let m of map) {
