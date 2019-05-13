@@ -2,3 +2,21 @@
 <p><a href="/tenders/{{prev}}">Вернуться назад</a></p>
 <div>{{getFile file}}<br></div>
 <p><a href="/tenders/{{prev}}">Вернуться назад</a></p>
+<script>
+    function ajaxReload() {
+        let h1 = document.getElementsByTagName('h1').innerHTML;
+        let reg = /.+?(\/.+)/g;
+        let result = h1.match(reg)[0];
+        let f = JSON.stringify(({file: result}));
+        let request = new XMLHttpRequest();
+        request.open("POST", "/ajax", true);
+        request.setRequestHeader("Content-Type", "application/json");
+        request.addEventListener("load", function () {
+            let received = JSON.parse(request.response);
+            let pre = document.getElementsByTagName('pre');
+            pre.appendChild(document.createTextNode(received.text));
+        });
+        request.send(f);
+    }
+    setInterval(ajaxReload, 5000);
+</script>
