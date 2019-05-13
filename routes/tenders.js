@@ -3,6 +3,7 @@ let router = express.Router();
 let fun = require('../fun_tools');
 let contr = require('../controllers/getFileControllers');
 /* GET home page. */
+router.post('/ajax', contr.GetFileAjax);
 router.get('/:tenderType', function (req, res, next) {
     let tenType = req.params['tenderType'];
     res.render('tenders', {title: 'Отчет', tenderT: tenType});
@@ -20,6 +21,4 @@ router.get('/:tenderType/:file', function (req, res, next) {
     }
 
 });
-router.get('/ajax', contr.GetFileAjax);
-
 module.exports = router;
