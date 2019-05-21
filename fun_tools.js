@@ -24,6 +24,7 @@ function getGraphAll(dir_name) {
     let updated = [];
     let dates = [];
     let diff_dates = [];
+    let file_size = [];
     let mtimes = [];
     for (let f of dir_list) {
         let date = getDateFromString(f);
@@ -38,10 +39,12 @@ function getGraphAll(dir_name) {
         let countsUpdates = getUpdatedFromFile(`${dir}/${f}`);
         let diffs = getDiff(`${dir}/${f}`);
         let mtm = getLastModif(`${dir}/${f}`);
+        let f_size = getFileSize(`${dir}/${f}`);
         added.push(countsAdded);
         updated.push(countsUpdates);
         diff_dates.push(diffs);
         mtimes.push(mtm)
+        file_size.push(f_size)
     }
     let obb = [];
     if (added.length > 0) {
@@ -56,7 +59,7 @@ function getGraphAll(dir_name) {
                     add.push({})
                 }
             }
-            obb.push({dates: dates, counts: temp, added: add, diff_dates: diff_dates, mtimes: mtimes});
+            obb.push({dates: dates, counts: temp, added: add, diff_dates: diff_dates, mtimes: mtimes, f_size: file_size});
         }
     }
     return obb
@@ -141,6 +144,22 @@ var datam = [trace2];
 var layoutm = {barmode: 'stack'};
 
 Plotly.newPlot(TESTER_M, datam, layoutm);
+</script>`
+    }
+    if (a.length > 0) {
+        result += `<div>Размер файла лога по дням</div><div id="tester_file_size" style="width:800px;height:350px;"></div>
+<script>
+    TESTER_F = document.getElementById('tester_file_size');
+    var trace3 = {
+  x: ${JSON.stringify(a[0].dates)},
+  y: ${JSON.stringify(a[0].f_size)},
+  name: 'Время',
+  type: 'bar'
+};
+var datam = [trace3];
+var layoutm = {barmode: 'stack'};
+
+Plotly.newPlot(TESTER_F, datam, layoutm);
 </script>`
     }
     return new hbs.SafeString(result)
@@ -273,6 +292,11 @@ function getCountFromFile(s) {
     let reg = /(Добав(или|лено)|Обнов(лено|или)) .* (\d+)/gm;
     return ftext.match(reg) || []
 
+}
+function getFileSize(f){
+    let stats = fs.statSync(f);
+    let fileSizeInBytes = stats["size"];
+    return fileSizeInBytes;
 }
 
 function getDiff(s) {
