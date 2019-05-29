@@ -627,7 +627,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersAztpa', 'ParserWebGo/log_aztpa')
     .set('TendersEvraz', 'ParserKotlinNew/logdir_tenders_evraz')
     .set('TendersMedsi', 'WebParserRust/logdir_medsi')
-    .set('TendersLada', 'WebParserRust/logdir_lada');
+    .set('TendersLada', 'WebParserRust/logdir_lada')
+    .set('TendersZmoRosles', 'ParserKotlinNew/logdir_tenders_rosles');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -834,7 +835,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersAztpa', 'Закупки с https://zakupki.aztpa.ru/, все')
     .set('TendersEvraz', 'Закупки с http://supply.evraz.com/, все')
     .set('TendersMedsi', 'Закупки с https://medsi.ru/, все')
-    .set('TendersLada', 'Закупки с https://lada-image.ru/, все');
+    .set('TendersLada', 'Закупки с https://lada-image.ru/, все')
+    .set('TendersZmoRosles', 'Закупки с https://roslesinforg-market.rts-tender.ru/, все');
 
 let export_map = [];
 for (let m of map) {
