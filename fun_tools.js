@@ -629,7 +629,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersMedsi', 'WebParserRust/logdir_medsi')
     .set('TendersLada', 'WebParserRust/logdir_lada')
     .set('TendersZmoRosles', 'ParserKotlinNew/logdir_tenders_rosles')
-    .set('TendersBrn32', 'ParserWebCore/log_brn32');
+    .set('TendersBrn32', 'ParserWebCore/log_brn32')
+    .set('TendersSmart', 'ParserWebFSharp/log_tenders_smart');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -838,7 +839,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersMedsi', 'Закупки с https://medsi.ru/, все')
     .set('TendersLada', 'Закупки с https://lada-image.ru/, все')
     .set('TendersZmoRosles', 'Закупки с https://roslesinforg-market.rts-tender.ru/, все')
-    .set('TendersBrn32', 'Закупки с http://tender32.ru/, все');
+    .set('TendersBrn32', 'Закупки с http://tender32.ru/, все')
+    .set('TendersSmart', 'Закупки с https://smarttender.biz/, все');
 
 let export_map = [];
 for (let m of map) {
