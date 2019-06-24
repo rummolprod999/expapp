@@ -641,7 +641,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersSmart', 'ParserWebFSharp/log_tenders_smart')
     .set('TendersAsia', 'WebParserRust/logdir_asia')
     .set('TendersRtsGen', 'ParserWebFSharp/log_tenders_rtsgen')
-    .set('TendersRusNano', 'ParserKotlinNew/logdir_tenders_rusnano');
+    .set('TendersRusNano', 'ParserKotlinNew/logdir_tenders_rusnano')
+    .set('TendersEldorado', 'WebParserRust/logdir_eldorado');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -854,7 +855,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersSmart', 'Закупки с https://smarttender.biz/, все')
     .set('TendersAsia', 'Закупки с https://asiacement.ru/, все')
     .set('TendersRtsGen', 'Закупки с https://223.rts-tender.ru/supplier/auction/Trade/Search.aspx, все')
-    .set('TendersRusNano', 'Закупки с https://www.b2b-rusnano.ru/, все');
+    .set('TendersRusNano', 'Закупки с https://www.b2b-rusnano.ru/, все')
+    .set('TendersEldorado', 'Закупки с https://www.eldorado.ru/, все');
 
 let export_map = [];
 for (let m of map) {
