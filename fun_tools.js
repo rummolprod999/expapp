@@ -647,7 +647,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersBaltika', 'WebParserRust/logdir_baltika')
     .set('TendersAlfa', 'WebParserRust/logdir_alfa')
     .set('TendersSmp', 'WebParserRust/logdir_smp')
-    .set('TendersTj', 'ParserWebFSharp/log_tenders_tj');
+    .set('TendersTj', 'ParserWebFSharp/log_tenders_tj')
+    .set('TendersPromUa', 'ParserPromUa/logdir_PromUa');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -866,7 +867,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersBaltika', 'Закупки с https://corporate.baltika.ru/, все')
     .set('TendersAlfa', 'Закупки с https://alfabank.ru/, все')
     .set('TendersSmp', 'Закупки с https://smpbank.ru/, все')
-    .set('TendersTj', 'Закупки с http://test.zakupki.gov.tj/, все');
+    .set('TendersTj', 'Закупки с http://test.zakupki.gov.tj/, все')
+    .set('TendersPromUa', 'Закупки с https://zakupki.prom.ua/, все');
 
 let export_map = [];
 for (let m of map) {
