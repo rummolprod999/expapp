@@ -244,7 +244,7 @@ module.exports.getTenCounts = function (dir_name) {
         let counts = getCountFromFile(`${dir}/${f}`);
         let param = `${dir}/${f}`.replace(/\//g, '--');
         result += `<div class="list-group-all"><p><strong>Дата: ${date}</strong></p>`;
-        result += `<p><a href="/">Вернуться назад</a></p>`;
+        result += `<p><button type="button" class="btn btn-secondary"><a href="/">Вернуться назад</a></button></p>`;
         result += `<p>Смотреть файл протокола: <a href='/tenders/${dk[0]}/${param}'>${dir}/${f}</a></p>`;
         result += "<ul>";
         for (let o of counts) {
@@ -275,9 +275,9 @@ module.exports.GetTenList = function (dir_l) {
     let result = "";
     result += `<p>Тип парсера: <strong>${dir_l[0]}</strong></p>`;
     result += `<p>Площадка: <strong>${get_description(dir_l[0])}</strong></p>`;
-    result += `<p>Смотреть отчеты: <a href='/tenders/${dir_l[0]}'>${dir_l[0]}</a></p>`;
-    result += `<p>Смотреть графики загрузки: <a href='/graph/${dir_l[0]}'>${dir_l[0]}</a></p>`;
-    result += `<p>Смотреть графики времени работы парсеров: <a href='/graph/timep/${dir_l[0]}'>${dir_l[0]}</a></p><br></p>`;
+    result += `<p><button type="button" class="btn btn-secondary"><a href='/tenders/${dir_l[0]}'>Смотреть отчеты: ${dir_l[0]}</a></button></p>`;
+    result += `<p><button type="button" class="btn btn-warning"><a href='/graph/${dir_l[0]}'>Смотреть графики загрузки: ${dir_l[0]}</a></button></p>`;
+    result += `<p><button type="button" class="btn btn-info"><a href='/graph/timep/${dir_l[0]}'>Смотреть графики времени работы парсеров: ${dir_l[0]}</a></button><br></p>`;
     return new hbs.SafeString(result)
 };
 

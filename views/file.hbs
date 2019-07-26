@@ -1,7 +1,7 @@
 <h1>{{title}} {{file}}</h1>
-<p><a href="/tenders/{{prev}}">Вернуться назад</a></p>
+<p><button type="button" class="btn btn-secondary"><a href="/tenders/{{prev}}">Вернуться назад</a></button></p>
 <div>{{getFile file}}<br></div>
-<p><a href="/tenders/{{prev}}">Вернуться назад</a></p>
+<p><button type="button" class="btn btn-secondary"><a href="/tenders/{{prev}}">Вернуться назад</a></button></p>
 <script>
     function ajaxReload() {
         let h1 = document.getElementsByTagName('h1')[0].innerHTML;
