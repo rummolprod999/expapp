@@ -653,7 +653,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersTurk', 'ParserWebFSharp/log_tenders_turk')
     .set('TendersAchi', 'ParserKotlinNew/logdir_tenders_achi')
     .set('TendersKg', 'ParserWebFSharp/log_tenders_kg')
-    .set('TendersAm', 'WebParserRust/logdir_am');
+    .set('TendersAm', 'WebParserRust/logdir_am')
+    .set('TendersEten', 'ParserWebFSharp/log_tenders_eten');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -878,7 +879,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersTurk', 'Закупки с https://turkmenportal.com/, все')
     .set('TendersAchi', 'Закупки с https://achizitii.md/, все')
     .set('TendersKg', 'Закупки с http://zakupki.gov.kg/, все')
-    .set('TendersAm', 'Закупки с http://procurement.am/, все');
+    .set('TendersAm', 'Закупки с http://procurement.am/, все')
+    .set('TendersEten', 'Закупки с http://etender.gov.md/, все');
 
 let export_map = [];
 for (let m of map) {
