@@ -658,7 +658,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersAzer', 'WebParserRust/logdir_azer')
     .set('TendersVipAst', 'ParserKotlinNew/logdir_tenders_vipast')
     .set('TendersRetailAst', 'ParserKotlinNew/logdir_tenders_retailast')
-    .set('TendersNeftAst', 'ParserKotlinNew/logdir_tenders_neftast');
+    .set('TendersNeftAst', 'ParserKotlinNew/logdir_tenders_neftast')
+    .set('TendersDochki', 'WebParserRust/logdir_dochki');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -888,7 +889,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersAzer', 'Закупки с http://ru.azerbaijan.tenderinfo.org/, все')
     .set('TendersVipAst', 'Закупки с http://utp.sberbank-ast.ru/VIP/List/PurchaseList/, все')
     .set('TendersRetailAst', 'Закупки с http://utp.sberbank-ast.ru/Retail/List/PurchaseList/, все')
-    .set('TendersNeftAst', 'Закупки с http://utp.sberbank-ast.ru/Neft/List/PurchaseList/, все');
+    .set('TendersNeftAst', 'Закупки с http://utp.sberbank-ast.ru/Neft/List/PurchaseList/, все')
+    .set('TendersDochki', 'Закупки с https://www.dochkisinochki.ru/, все');
 
 let export_map = [];
 for (let m of map) {
