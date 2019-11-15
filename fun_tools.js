@@ -661,7 +661,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersNeftAst', 'ParserKotlinNew/logdir_tenders_neftast')
     .set('TendersDochki', 'WebParserRust/logdir_dochki')
     .set('TendersSportMaster', 'ParserWebCore/log_sportmaster')
-    .set('TendersCisLink', 'ParserWebFSharp/log_tenders_cislink');
+    .set('TendersCisLink', 'ParserWebFSharp/log_tenders_cislink')
+    .set('TendersTekSil', 'ParserWebCore/log_teksil');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -894,7 +895,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersNeftAst', 'Закупки с http://utp.sberbank-ast.ru/Neft/List/PurchaseList/, все')
     .set('TendersDochki', 'Закупки с https://www.dochkisinochki.ru/, все')
     .set('TendersSportMaster', 'Закупки с http://zakupki.sportmaster.ru/, все')
-    .set('TendersCisLink', 'Закупки с http://auction.cislink.com/, все');
+    .set('TendersCisLink', 'Закупки с http://auction.cislink.com/, все')
+    .set('TendersTekSil', 'Закупки с https://www.tektorg.ru/silovyi_machine/procedures/, все');
 
 let export_map = [];
 for (let m of map) {
