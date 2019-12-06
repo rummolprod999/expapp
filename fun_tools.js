@@ -666,7 +666,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersPetr', 'ParserWebFSharp/log_tenders_petr')
     .set('TendersSberb2b', 'ParserWebCore/log_sberb2b')
     .set('TendersRosatom', 'ParserWebGo/log_rosatom')
-    .set('TendersExuzex', 'ParserKotlinNew/logdir_tenders_exusex');
+    .set('TendersExuzex', 'ParserKotlinNew/logdir_tenders_exusex')
+    .set('TendersUngi', 'WebParserRust/logdir_ungi');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -904,7 +905,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersPetr', 'Закупки с https://eshop-ptz.ru/purchases/, все')
     .set('TendersSberb2b', 'Закупки с https://sberb2b.ru/, все')
     .set('TendersRosatom', 'Закупки с http://zakupki.rosatom.ru/, все')
-    .set('TendersExuzex', 'Закупки с https://exarid.uzex.uz/, все');
+    .set('TendersExuzex', 'Закупки с https://exarid.uzex.uz/, все')
+    .set('TendersUngi', 'Закупки с http://ungi.uz/, все');
 
 let export_map = [];
 for (let m of map) {
