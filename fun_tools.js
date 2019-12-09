@@ -667,7 +667,9 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersSberb2b', 'ParserWebCore/log_sberb2b')
     .set('TendersRosatom', 'ParserWebGo/log_rosatom')
     .set('TendersExuzex', 'ParserKotlinNew/logdir_tenders_exusex')
-    .set('TendersUngi', 'WebParserRust/logdir_ungi');
+    .set('TendersUngi', 'WebParserRust/logdir_ungi')
+    .set('TendersPostAst', 'ParserKotlinNew/logdir_tenders_postast')
+    .set('TendersCbrfAst', 'ParserKotlinNew/logdir_tenders_cbrfast');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -906,7 +908,9 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersSberb2b', 'Закупки с https://sberb2b.ru/, все')
     .set('TendersRosatom', 'Закупки с http://zakupki.rosatom.ru/, все')
     .set('TendersExuzex', 'Закупки с https://exarid.uzex.uz/, все')
-    .set('TendersUngi', 'Закупки с http://ungi.uz/, все');
+    .set('TendersUngi', 'Закупки с http://ungi.uz/, все')
+    .set('TendersPostAst', 'Закупки с http://utp.sberbank-ast.ru/RussianPost/List/PurchaseList/, все')
+    .set('TendersCbrfAst', 'Закупки с http://utp.sberbank-ast.ru/CBRF/List/PurchaseList/, все');
 
 let export_map = [];
 for (let m of map) {
