@@ -675,7 +675,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersAzs', 'WebParserRust/logdir_azs')
     .set('TendersEstoreSpb', 'ParserWebFSharp/log_tenders_estorespb')
     .set('TendersRosAgro', 'ParserWebFSharp/log_tenders_rosagro')
-    .set('TendersNeftReg', 'ParserWebFSharp/log_tenders_neftreg');
+    .set('TendersNeftReg', 'ParserWebFSharp/log_tenders_neftreg')
+    .set('TendersForScience', 'ParserWebFSharp/log_tenders_forscience');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -922,7 +923,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersAzs', 'Закупки с https://azsgazprom.ru/, все')
     .set('TendersEstoreSpb', 'Закупки с https://estore.gz-spb.ru/, все')
     .set('TendersRosAgro', 'Закупки с https://www.rosagroleasing.ru/, все')
-    .set('TendersNeftReg', 'Закупки с https://etp.neftregion.ru/, все');
+    .set('TendersNeftReg', 'Закупки с https://etp.neftregion.ru/, все')
+    .set('TendersForScience', 'Закупки с https://4science.ru/, все');
 
 let export_map = [];
 for (let m of map) {
