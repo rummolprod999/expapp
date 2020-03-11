@@ -686,7 +686,10 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersTpsre', 'ParserWebGo/log_tpsre')
     .set('TendersAgat', 'ParserWebCore/log_agat')
     .set('TendersDmtu', 'ParserKotlinNew/logdir_tenders_dmtu')
-    .set('TendersUni', 'ParserWebFSharp/log_tenders_unistream');
+    .set('TendersUni', 'ParserWebFSharp/log_tenders_unistream')
+    .set('TendersRencredit', 'ParserKotlinNew/logdir_tenders_rencredit')
+    .set('TendersOrpnz', 'ParserKotlinNew/logdir_tenders_orpnz')
+    .set('TendersKsk', 'ParserWebFSharp/log_tenders_ksk');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -944,7 +947,10 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersTpsre', 'Закупки с https://www.tpsre.ru/, все')
     .set('TendersAgat', 'Закупки с https://agat-group.com/, все')
     .set('TendersDmtu', 'Закупки с http://anomtu.ru/, все')
-    .set('TendersUni', 'Закупки с https://unistream.ru/, все');
+    .set('TendersUni', 'Закупки с https://unistream.ru/, все')
+    .set('TendersRencredit', 'Закупки с https://rencredit.ru/, все')
+    .set('TendersOrpnz', 'Закупки с https://www.ornpz.ru/, все')
+    .set('TendersKsk', 'Закупки с http://www.gt-ksk.com/, все');
 
 let export_map = [];
 for (let m of map) {
