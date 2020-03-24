@@ -696,7 +696,9 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersKaprem', 'WebParserRust/logdir_kaprem')
     .set('TendersSamcom', 'ParserWebCore/log_samcom')
     .set('TendersGmt', 'ParserWebFSharp/log_tenders_gmt')
-    .set('TendersYmz', 'ParserWebFSharp/log_tenders_ymz');
+    .set('TendersYmz', 'ParserWebFSharp/log_tenders_ymz')
+    .set('TendersUnipro', 'ParserWebFSharp/log_tenders_unipro')
+    .set('TendersApps', 'ParserWebFSharp/log_tenders_apps');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -964,7 +966,9 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersKaprem', 'Закупки с http://kapremont02.ru/, все')
     .set('TendersSamcom', 'Закупки с https://samcomsys.ru/, все')
     .set('TendersGmt', 'Закупки с http://gazprom-gmt.ru/, все')
-    .set('TendersYmz', 'Закупки с https://www.ymzmotor.ru/, все');
+    .set('TendersYmz', 'Закупки с https://www.ymzmotor.ru/, все')
+    .set('TendersUnipro', 'Закупки с http://unipro.energy/, все')
+    .set('TendersApps', 'Закупки с https://apps.chtpz.ru/, все');
 
 let export_map = [];
 for (let m of map) {
