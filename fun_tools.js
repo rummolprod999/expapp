@@ -699,7 +699,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersYmz', 'ParserWebFSharp/log_tenders_ymz')
     .set('TendersUnipro', 'ParserWebFSharp/log_tenders_unipro')
     .set('TendersApps', 'ParserWebFSharp/log_tenders_apps')
-    .set('TendersRavis', 'ParserWebCore/log_ravis');
+    .set('TendersRavis', 'ParserWebCore/log_ravis')
+    .set('TendersBoaz', 'ParserWebCore/log_boaz');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -970,7 +971,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersYmz', 'Закупки с https://www.ymzmotor.ru/, все')
     .set('TendersUnipro', 'Закупки с http://unipro.energy/, все')
     .set('TendersApps', 'Закупки с https://apps.chtpz.ru/, все')
-    .set('TendersRavis', 'Закупки с http://ravistender.ru/, все');
+    .set('TendersRavis', 'Закупки с http://ravistender.ru/, все')
+    .set('TendersBoaz', 'Закупки с http://boaz-konkurs.ru/, все');
 
 let export_map = [];
 for (let m of map) {
