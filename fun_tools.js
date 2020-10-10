@@ -711,7 +711,14 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersOilb2b', 'ParserKotlinNew/logdir_tenders_oilb2b')
     .set('TendersDomRfAst', 'ParserKotlinNew/logdir_tenders_domrfast')
     .set('TendersEnPlusAst', 'ParserKotlinNew/logdir_tenders_enplusast')
-    .set('TendersBidzaar', 'ParserWebFSharp/log_tenders_bidzaar');
+    .set('TendersBidzaar', 'ParserWebFSharp/log_tenders_bidzaar')
+    .set('TendersMetholding', 'ParserWebFSharp/log_tenders_metodholding')
+    .set('TendersUralmash', 'ParserWebCore/log_uralmash')
+    .set('TendersKamaz', 'ParserKotlinNew/logdir_tenders_kamaz')
+    .set('TendersLotOnline', 'ParserWebCore/log_lotonline')
+    .set('TendersBhm', 'ParserWebFSharp/log_tenders_bhm')
+    .set('TendersEtpu', 'ParserWebCore/log_etpu')
+    .set('TendersDellin', 'ParserWebCore/log_dellin');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -994,7 +1001,14 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersOilb2b', 'Закупки с https://oilb2bcs.ru/, все')
     .set('TendersDomRfAst', 'Закупки с https://utp.sberbank-ast.ru/Main/List/UnitedPurchaseListTradeDomRF, все')
     .set('TendersEnPlusAst', 'Закупки с https://utp.sberbank-ast.ru/Main/List/UnitedPurchaseListEnPlusGroup, все')
-    .set('TendersBidzaar', 'Закупки с https://bidzaar.com/, все');
+    .set('TendersBidzaar', 'Закупки с https://bidzaar.com/, все')
+    .set('TendersMetholding', 'Закупки с http://metholding.com/, все')
+    .set('TendersUralmash', 'Закупки с https://uralmash-kartex.ru/, все')
+    .set('TendersKamaz', 'Закупки с https://kamaz.ru/, все')
+    .set('TendersLotOnline', 'Закупки с https://market.lot-online.ru/, все')
+    .set('TendersBhm', 'Закупки с http://www.oaobhm.ru/tender/, все')
+    .set('TendersEtpu', 'Закупки с https://torgi.etpu.ru/, все')
+    .set('TendersDellin', 'Закупки с https://etp.dellin.ru/, все');
 
 let export_map = [];
 for (let m of map) {
