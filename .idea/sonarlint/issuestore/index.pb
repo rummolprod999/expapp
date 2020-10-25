@@ -37,3 +37,5 @@ A
 views/layout.hbs,3/3/337c5e950c60805614f302427be09431ecb93e2f
 7
 bin/www,f/9/f9f3ad31c1666c9d010b84cbbe24e70370a40411
+T
+$.idea/codeStyles/codeStyleConfig.xml,d/d/dd7b3350c29c49497756c7f32c69a3bed18b1cba
