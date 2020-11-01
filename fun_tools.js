@@ -719,7 +719,10 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersBhm', 'ParserWebFSharp/log_tenders_bhm')
     .set('TendersEtpu', 'ParserWebCore/log_etpu')
     .set('TendersDellin', 'ParserWebCore/log_dellin')
-    .set('TendersIsmt', 'ParserWebCore/log_ismt');
+    .set('TendersIsmt', 'ParserWebCore/log_ismt')
+    .set('TendersTpta', 'ParserWebCore/log_tpta')
+    .set('TendersDomRu', 'ParserWebFSharp/log_tenders_domru')
+    .set('TendersSnHz', 'WebParserRust/logdir_snhz');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1010,7 +1013,10 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersBhm', 'Закупки с http://www.oaobhm.ru/tender/, все')
     .set('TendersEtpu', 'Закупки с https://torgi.etpu.ru/, все')
     .set('TendersDellin', 'Закупки с https://etp.dellin.ru/, все')
-    .set('TendersIsmt', 'Закупки с http://is-mt.pro/, все');
+    .set('TendersIsmt', 'Закупки с http://is-mt.pro/, все')
+    .set('TendersTpta', 'Закупки с https://www.tpta.ru/, все')
+    .set('TendersDomRu', 'Закупки с https://zakupki.domru.ru/, все')
+    .set('TendersSnHz', 'Закупки с https://snhz.ru/, все');
 
 let export_map = [];
 for (let m of map) {
