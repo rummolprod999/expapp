@@ -722,7 +722,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersIsmt', 'ParserWebCore/log_ismt')
     .set('TendersTpta', 'ParserWebCore/log_tpta')
     .set('TendersDomRu', 'ParserWebFSharp/log_tenders_domru')
-    .set('TendersSnHz', 'WebParserRust/logdir_snhz');
+    .set('TendersSnHz', 'WebParserRust/logdir_snhz')
+    .set('TendersSamaraGips', 'ParserWebFSharp/log_tenders_samaragips');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1016,7 +1017,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersIsmt', 'Закупки с http://is-mt.pro/, все')
     .set('TendersTpta', 'Закупки с https://www.tpta.ru/, все')
     .set('TendersDomRu', 'Закупки с https://zakupki.domru.ru/, все')
-    .set('TendersSnHz', 'Закупки с https://snhz.ru/, все');
+    .set('TendersSnHz', 'Закупки с https://snhz.ru/, все')
+    .set('TendersSamaraGips', 'Закупки с https://samaragips.ru/, все');
 
 let export_map = [];
 for (let m of map) {
