@@ -723,7 +723,11 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersTpta', 'ParserWebCore/log_tpta')
     .set('TendersDomRu', 'ParserWebFSharp/log_tenders_domru')
     .set('TendersSnHz', 'WebParserRust/logdir_snhz')
-    .set('TendersSamaraGips', 'ParserWebFSharp/log_tenders_samaragips');
+    .set('TendersSamaraGips', 'ParserWebFSharp/log_tenders_samaragips')
+    .set('TendersGoldenSeed', 'ParserWebFSharp/log_tenders_goldenseed')
+    .set('TendersKaustik', 'ParserWebFSharp/log_tenders_kaustik')
+    .set('TendersDme', 'ParserWebFSharp/log_tenders_dme')
+    .set('TendersTele2', 'ParserWebFSharp/log_tenders_tele2');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1018,7 +1022,11 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersTpta', 'Закупки с https://www.tpta.ru/, все')
     .set('TendersDomRu', 'Закупки с https://zakupki.domru.ru/, все')
     .set('TendersSnHz', 'Закупки с https://snhz.ru/, все')
-    .set('TendersSamaraGips', 'Закупки с https://samaragips.ru/, все');
+    .set('TendersSamaraGips', 'Закупки с https://samaragips.ru/, все')
+    .set('TendersGoldenSeed', 'Закупки с https://www.goldenseed.ru/, все')
+    .set('TendersKaustik', 'Закупки с https://www.kaustik.ru/, все')
+    .set('TendersDme', 'Закупки с https://market.dme.aero/, все')
+    .set('TendersTele2', 'Закупки с https://msk.tele2.ru/, все');
 
 let export_map = [];
 for (let m of map) {
