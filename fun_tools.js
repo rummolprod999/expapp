@@ -730,7 +730,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersTele2', 'ParserWebFSharp/log_tenders_tele2')
     .set('TendersOsnova', 'ParserWebFSharp/log_tenders_osnova')
     .set('TendersAbsGroup', 'ParserWebCore/log_absgroup')
-    .set('TendersSibGenco', 'ParserWebFSharp/log_tenders_sibgenco');
+    .set('TendersSibGenco', 'ParserWebFSharp/log_tenders_sibgenco')
+    .set('TendersVtbConnect', 'ParserWebFSharp/log_tenders_vtbconnect');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1032,7 +1033,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersTele2', 'Закупки с https://msk.tele2.ru/, все')
     .set('TendersOsnova', 'Закупки с https://tender.gk-osnova.ru/, все')
     .set('TendersAbsGroup', 'Закупки с https://tender.absgroup.ru/, все')
-    .set('TendersSibGenco', 'Закупки с https://sibgenco.ru/, все');
+    .set('TendersSibGenco', 'Закупки с https://sibgenco.ru/, все')
+    .set('TendersVtbConnect', 'Закупки с https://www.vtbconnect.ru/, все');
 
 let export_map = [];
 for (let m of map) {
