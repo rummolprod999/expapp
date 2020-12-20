@@ -733,7 +733,13 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersSibGenco', 'ParserWebFSharp/log_tenders_sibgenco')
     .set('TendersVtbConnect', 'ParserWebFSharp/log_tenders_vtbconnect')
     .set('TendersRb2b', 'ParserWebCore/log_rb2b')
-    .set('TendersEuroTrans', 'UnParserSelen/log_eurotrans');
+    .set('TendersEuroTrans', 'UnParserSelen/log_eurotrans')
+    .set('TendersRhTorg', 'UnParserSelen/log_rhtorg')
+    .set('TendersFederal', 'ParserWebCore/log_federal')
+    .set('TendersRtCi', 'ParserWebFSharp/log_tenders_rtci')
+    .set('TendersForumGd', 'ParserWebFSharp/log_tenders_forumgd')
+    .set('TendersZakazRf', 'ParserKotlinNew/logdir_tenders_zakazrf')
+    .set('TendersBidBe', 'ParserKotlinNew/logdir_tenders_bidbe');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1038,7 +1044,13 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersSibGenco', 'Закупки с https://sibgenco.ru/, все')
     .set('TendersVtbConnect', 'Закупки с https://www.vtbconnect.ru/, все')
     .set('TendersRb2b', 'Закупки с https://zakupki.rb2b.ru/, все')
-    .set('TendersEuroTrans', 'Закупки с http://tender.eurotransstroy.ru/, все');
+    .set('TendersEuroTrans', 'Закупки с http://tender.eurotransstroy.ru/, все')
+    .set('TendersRhTorg', 'Закупки с http://rhtorg.com/, все')
+    .set('TendersFederal', 'Закупки с https://t2.federal1.ru/, все')
+    .set('TendersRtCi', 'Закупки с https://zakupki.rt-ci.ru/, все')
+    .set('TendersForumGd', 'Закупки с https://tender.forum-gd.ru/, все')
+    .set('TendersZakazRf', 'Закупки с http://bp.zakazrf.ru/, все')
+    .set('TendersBidBe', 'Закупки с https://bidbe.ru/, все');
 
 let export_map = [];
 for (let m of map) {
