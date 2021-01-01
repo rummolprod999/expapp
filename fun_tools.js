@@ -628,7 +628,7 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersApk', 'ParserWebGo/log_apk')
     .set('TendersPewete', 'WebParserRust/logdir_pewete')
     .set('TendersQuadra', 'WebParserRust/logdir_quadra')
-    .set('TendersTsm', 'ParserWebFSharp/log_tenders_tsm')
+    .set('TendersTsm', 'UnParserSelen/log_tsm')
     .set('TendersTmk', 'ParserKotlinNew/logdir_tenders_tmk')
     .set('PlanGraph44', 'ParserTenderPlan/log_plan44')
     .set('TendersTgk14', 'WebParserRust/logdir_tgk14')
@@ -739,7 +739,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersRtCi', 'ParserWebFSharp/log_tenders_rtci')
     .set('TendersForumGd', 'ParserWebFSharp/log_tenders_forumgd')
     .set('TendersZakazRf', 'ParserKotlinNew/logdir_tenders_zakazrf')
-    .set('TendersBidBe', 'ParserKotlinNew/logdir_tenders_bidbe');
+    .set('TendersBidBe', 'ParserKotlinNew/logdir_tenders_bidbe')
+    .set('TendersB2BWeb', 'ParserWebCore/log_b2bweb');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1050,7 +1051,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersRtCi', 'Закупки с https://zakupki.rt-ci.ru/, все')
     .set('TendersForumGd', 'Закупки с https://tender.forum-gd.ru/, все')
     .set('TendersZakazRf', 'Закупки с http://bp.zakazrf.ru/, все')
-    .set('TendersBidBe', 'Закупки с https://bidbe.ru/, все');
+    .set('TendersBidBe', 'Закупки с https://bidbe.ru/, все')
+    .set('TendersB2BWeb', 'Закупки с https://www.b2b-center.ru/, все');
 
 let export_map = [];
 for (let m of map) {
