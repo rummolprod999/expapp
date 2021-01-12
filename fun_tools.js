@@ -634,7 +634,7 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersTgk14', 'WebParserRust/logdir_tgk14')
     .set('TendersAztpa', 'ParserWebGo/log_aztpa')
     .set('TendersEvraz', 'ParserKotlinNew/logdir_tenders_evraz')
-    .set('TendersMedsi', 'WebParserRust/logdir_medsi')
+    .set('TendersMedsi', 'UnParserSelen/log_medsi')
     .set('TendersLada', 'WebParserRust/logdir_lada')
     .set('TendersZmoRosles', 'ParserKotlinNew/logdir_tenders_rosles')
     .set('TendersBrn32', 'ParserWebCore/log_brn32')
@@ -740,7 +740,9 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersForumGd', 'ParserWebFSharp/log_tenders_forumgd')
     .set('TendersZakazRf', 'ParserKotlinNew/logdir_tenders_zakazrf')
     .set('TendersBidBe', 'ParserKotlinNew/logdir_tenders_bidbe')
-    .set('TendersB2BWeb', 'ParserWebCore/log_b2bweb');
+    .set('TendersB2BWeb', 'ParserWebCore/log_b2bweb')
+    .set('TendersEnergyBase', 'ParserWebFSharp/log_tenders_energybase')
+    .set('PriceRequest44', 'PriceRequest44/logdir_Request44');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1052,7 +1054,9 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersForumGd', 'Закупки с https://tender.forum-gd.ru/, все')
     .set('TendersZakazRf', 'Закупки с http://bp.zakazrf.ru/, все')
     .set('TendersBidBe', 'Закупки с https://bidbe.ru/, все')
-    .set('TendersB2BWeb', 'Закупки с https://www.b2b-center.ru/, все');
+    .set('TendersB2BWeb', 'Закупки с https://www.b2b-center.ru/, все')
+    .set('TendersEnergyBase', 'Закупки с https://energybase.ru/, все')
+    .set('PriceRequest44', 'Запросы цен по ФЗ 44 с ЕИС');
 
 let export_map = [];
 for (let m of map) {
