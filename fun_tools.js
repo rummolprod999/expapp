@@ -742,7 +742,15 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersBidBe', 'ParserKotlinNew/logdir_tenders_bidbe')
     .set('TendersB2BWeb', 'ParserWebCore/log_b2bweb')
     .set('TendersEnergyBase', 'ParserWebFSharp/log_tenders_energybase')
-    .set('PriceRequest44', 'PriceRequest44/logdir_Request44');
+    .set('PriceRequest44', 'PriceRequest44/logdir_Request44')
+    .set('TendersGpbPriceRequest', 'ParserWebCore/log_gpb')
+    .set('TendersStrateg', 'ParserWebCore/log_strateg')
+    .set('TendersEtpRt', 'ParserWebFSharp/log_tenders_etprt')
+    .set('TendersComitaZmo', 'ParserWebFSharp/log_tenders_comitazmo')
+    .set('PriceRequest44New', 'ParserTenders/log_preq44')
+    .set('TendersTenderIt', 'ParserWebCore/log_tenderit')
+    .set('TendersKuzocm', 'ParserWebCore/log_kuzocm')
+    .set('TendersZdship', 'ParserWebCore/log_zdship');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1056,7 +1064,15 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersBidBe', 'Закупки с https://bidbe.ru/, все')
     .set('TendersB2BWeb', 'Закупки с https://www.b2b-center.ru/, все')
     .set('TendersEnergyBase', 'Закупки с https://energybase.ru/, все')
-    .set('PriceRequest44', 'Запросы цен по ФЗ 44 с ЕИС');
+    .set('PriceRequest44', 'Запросы цен по ФЗ 44 с ЕИС')
+    .set('TendersGpbPriceRequest', 'Закупки с https://etp.gpb.ru/, все')
+    .set('TendersStrateg', 'Закупки с https://strateg-etp.ru/, все')
+    .set('TendersEtpRt', 'Закупки с https://etp-rt.ru/, все')
+    .set('TendersComitaZmo', 'Закупки с https://etp.comita.ru/, закупки малого объема')
+    .set('PriceRequest44New', 'Запросы цен по 44 ФЗ с https://zakupki.gov.ru')
+    .set('TendersTenderIt', 'Закупки с https://tenderit.ru/, все')
+    .set('TendersKuzocm', 'Закупки с https://etp.kuzocm.ru/, все')
+    .set('TendersZdship', 'Закупки с http://tender.zdship.ru/, все');
 
 let export_map = [];
 for (let m of map) {
