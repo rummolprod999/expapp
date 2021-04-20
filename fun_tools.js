@@ -489,7 +489,7 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersTalan', 'UnParserSelen/log_talan')
     .set('TendersTander', 'UnParserSelen/log_tander')
     .set('TendersKomTech', 'ParserWebGo/log_komtech')
-    .set('OnlineContract', 'ParserWebGo/log_onlinecontract')
+    .set('OnlineContract', 'ParserWebCore/log_ocontract')
     .set('RosElTorg', 'ParserWebFSharp/log_tenders_rossel')
     .set('TendersCpc', 'ParserWebGo/log_cpc')
     .set('DemoAccess', 'log_send_email')
@@ -750,7 +750,9 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('PriceRequest44New', 'ParserTenders/log_preq44')
     .set('TendersTenderIt', 'ParserWebCore/log_tenderit')
     .set('TendersKuzocm', 'ParserWebCore/log_kuzocm')
-    .set('TendersZdship', 'ParserWebCore/log_zdship');
+    .set('TendersZdship', 'ParserWebCore/log_zdship')
+    .set('TendersEstp', 'ParserWebFSharp/log_tenders_estp')
+    .set('TendersMagnitStroy', 'ParserWebFSharp/log_tenders_magnitstroy');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1072,7 +1074,9 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('PriceRequest44New', 'Запросы цен по 44 ФЗ с https://zakupki.gov.ru')
     .set('TendersTenderIt', 'Закупки с https://tenderit.ru/, все')
     .set('TendersKuzocm', 'Закупки с https://etp.kuzocm.ru/, все')
-    .set('TendersZdship', 'Закупки с http://tender.zdship.ru/, все');
+    .set('TendersZdship', 'Закупки с http://tender.zdship.ru/, все')
+    .set('TendersEstp', 'Закупки с http://estp.ru/, ЭМ')
+    .set('TendersMagnitStroy', 'Закупки с http://tender.magnitostroy.su/, все');
 
 let export_map = [];
 for (let m of map) {
