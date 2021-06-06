@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
 });
 router.get('/:tenderType/:file', function (req, res, next) {
     let file = req.params['file'].replace(/--/g, '/');
-    if (file.includes("tenders.enter-it.ru/python") && file.endsWith(".log")) {
+    if (file.includes("srv/parsers") && file.endsWith(".log")) {
         let prev = req.params['tenderType'];
         res.render('file', {title: `Файл протокола работы парсера ${prev}`, file: file, prev: prev});
     } else {
