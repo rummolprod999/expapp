@@ -428,7 +428,7 @@ function getUpdatedFromFile(s) {
 
 }
 
-const dir_prefix = '/srv/tenders.enter-it.ru/python/';
+const dir_prefix = '/srv/parsers/';
 let map = new Map();
 map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('Tenders223Fz', 'ParserTenders/log_tenders223')
@@ -757,7 +757,17 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersDpd', 'ParserWebCore/log_dpd')
     .set('TendersKkbank', 'ParserWebCore/log_kkbank')
     .set('TendersGipVn', 'ParserWebCore/log_gipvn')
-    .set('TendersBngf', 'ParserWebCore/log_bngf');
+    .set('TendersBngf', 'ParserWebCore/log_bngf')
+    .set('TendersPnsh', 'UnParserSelen/log_pnsh')
+    .set('TendersWorkspace', 'ParserWebCore/log_workspace')
+    .set('TendersSpnova', 'ParserKotlinNew/logdir_tenders_spnova')
+    .set('TendersNeftisa', 'ParserWebFSharp/log_tenders_neftisa')
+    .set('TendersVprom', 'ParserKotlinNew/logdir_tenders_vprom')
+    .set('TendersKopemash', 'ParserWebCore/log_kopemash')
+    .set('TendersAomsz', 'ParserKotlinNew/logdir_tenders_aomsz')
+    .set('TendersRusfish', 'ParserWebCore/log_rusfish')
+    .set('TendersUralair', 'ParserWebCore/log_uralair')
+    .set('TendersSochipark', 'ParserWebCore/log_sochipark');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1086,7 +1096,17 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersDpd', 'Закупки с https://www1.dpd.ru/, все')
     .set('TendersKkbank', 'Закупки с https://kk.bank/, все')
     .set('TendersGipVn', 'Закупки с http://gipvn.ru/, все')
-    .set('TendersBngf', 'Закупки с https://bngf.ru/, все');
+    .set('TendersBngf', 'Закупки с https://bngf.ru/, все')
+    .set('TendersPnsh', 'Закупки с https://tender.pnsh.ru/, все')
+    .set('TendersWorkspace', 'Закупки с https://workspace.ru/, все')
+    .set('TendersSpnova', 'Закупки с http://www.snpnova.com/, все')
+    .set('TendersNeftisa', 'Закупки с https://www.neftisa.ru/, все')
+    .set('TendersVprom', 'Закупки с https://voltyre-prom.ru/, все')
+    .set('TendersKopemash', 'Закупки с https://www.kopemash.ru/, все')
+    .set('TendersAomsz', 'Закупки с https://aomsz.ru/, все')
+    .set('TendersRusfish', 'Закупки с https://russianfishery.ru/, все')
+    .set('TendersUralair', 'Закупки с https://www.uralairlines.ru/, все')
+    .set('TendersSochipark', 'Закупки с https://www.sochipark.ru/, все');
 
 let export_map = [];
 for (let m of map) {
