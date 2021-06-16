@@ -767,7 +767,10 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersAomsz', 'ParserKotlinNew/logdir_tenders_aomsz')
     .set('TendersRusfish', 'ParserWebCore/log_rusfish')
     .set('TendersUralair', 'ParserWebCore/log_uralair')
-    .set('TendersSochipark', 'ParserWebCore/log_sochipark');
+    .set('TendersSochipark', 'ParserWebCore/log_sochipark')
+    .set('TendersTekRusGazBur', 'ParserWebGo/log_tekrusgazbur')
+    .set('TendersTekRosImport', 'ParserWebGo/log_tekrosimport')
+    .set('TendersTekTyumen', 'ParserWebGo/log_tektyumen');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1106,7 +1109,11 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersAomsz', 'Закупки с https://aomsz.ru/, все')
     .set('TendersRusfish', 'Закупки с https://russianfishery.ru/, все')
     .set('TendersUralair', 'Закупки с https://www.uralairlines.ru/, все')
-    .set('TendersSochipark', 'Закупки с https://www.sochipark.ru/, все');
+    .set('TendersSochipark', 'Закупки с https://www.sochipark.ru/, все')
+    .set('TendersTekRusGazBur', 'Закупки с https://www.tektorg.ru/rusgazburenie/procedures/, все')
+    .set('TendersTekRosImport', 'Закупки с https://www.tektorg.ru/rosmorport/procedures/, все')
+    .set('TendersTekTyumen', 'Закупки с https://www.tektorg.ru/portal_tyumen/procedures/, все');
+
 
 let export_map = [];
 for (let m of map) {
