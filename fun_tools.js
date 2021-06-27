@@ -770,7 +770,17 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersSochipark', 'ParserWebCore/log_sochipark')
     .set('TendersTekRusGazBur', 'ParserWebGo/log_tekrusgazbur')
     .set('TendersTekRosImport', 'ParserWebGo/log_tekrosimport')
-    .set('TendersTekTyumen', 'ParserWebGo/log_tektyumen');
+    .set('TendersTekTyumen', 'ParserWebGo/log_tektyumen')
+    .set('TendersKorabel', 'ParserWebCore/log_korabel')
+    .set('TendersEurosib', 'ParserWebCore/log_eurosib')
+    .set('TendersBelorusNeft', 'ParserWebFSharp/log_tenders_belorusneft')
+    .set('TendersIshim', 'ParserWebFSharp/log_tenders_ishim')
+    .set('TendersFpk', 'ParserKotlinNew/logdir_tenders_fpk')
+    .set('TendersBarnaulTm', 'ParserWebFSharp/log_tenders_barnaultm')
+    .set('TendersBorets', 'ParserKotlinNew/logdir_tenders_borets')
+    .set('TendersTknso', 'ParserKotlinNew/logdir_tenders_tknso')
+    .set('TendersGns', 'ParserKotlinNew/logdir_tenders_gns')
+    .set('TendersSpgr', 'ParserWebCore/log_spgr');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1112,7 +1122,17 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersSochipark', 'Закупки с https://www.sochipark.ru/, все')
     .set('TendersTekRusGazBur', 'Закупки с https://www.tektorg.ru/rusgazburenie/procedures/, все')
     .set('TendersTekRosImport', 'Закупки с https://www.tektorg.ru/rosmorport/procedures/, все')
-    .set('TendersTekTyumen', 'Закупки с https://www.tektorg.ru/portal_tyumen/procedures/, все');
+    .set('TendersTekTyumen', 'Закупки с https://www.tektorg.ru/portal_tyumen/procedures/, все')
+    .set('TendersKorabel', 'Закупки с https://www.korabel.ru/, все')
+    .set('TendersEurosib', 'Закупки с https://www.eurosib-td.ru/, все')
+    .set('TendersBelorusNeft', 'Закупки с http://www.belorusneft-siberia.ru/, все')
+    .set('TendersIshim', 'Закупки с http://etp.ishim-agro.ru/, все')
+    .set('TendersFpk', 'Закупки с https://fpkinvest.ru/, все')
+    .set('TendersBarnaulTm', 'Закупки с http://www.barnaultransmash.ru/, все')
+    .set('TendersBorets', 'Закупки с http://tenderborets.ru/, все')
+    .set('TendersTknso', 'Закупки с http://tknso.ru/, все')
+    .set('TendersGns', 'Закупки с https://www.gns-tender.ru/, все')
+    .set('TendersSpgr', 'Закупки с http://procurement.spgr.ru/, все');
 
 
 let export_map = [];
