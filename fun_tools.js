@@ -780,7 +780,11 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersBorets', 'ParserKotlinNew/logdir_tenders_borets')
     .set('TendersTknso', 'ParserKotlinNew/logdir_tenders_tknso')
     .set('TendersGns', 'ParserKotlinNew/logdir_tenders_gns')
-    .set('TendersSpgr', 'ParserWebCore/log_spgr');
+    .set('TendersSpgr', 'ParserWebCore/log_spgr')
+    .set('TendersRcs', 'ParserWebCore/log_rcs')
+    .set('TendersYangPur', 'ParserWebCore/log_yangpur')
+    .set('TendersTulaRegion', 'ParserWebFSharp/log_tenders_tularegion')
+    .set('TendersKpResort', 'ParserWebCore/log_kpresort');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1132,7 +1136,11 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersBorets', 'Закупки с http://tenderborets.ru/, все')
     .set('TendersTknso', 'Закупки с http://tknso.ru/, все')
     .set('TendersGns', 'Закупки с https://www.gns-tender.ru/, все')
-    .set('TendersSpgr', 'Закупки с http://procurement.spgr.ru/, все');
+    .set('TendersSpgr', 'Закупки с http://procurement.spgr.ru/, все')
+    .set('TendersRcs', 'Закупки с http://rcs-e.ru/, все')
+    .set('TendersYangPur', 'Закупки с http://www.yangpur.ru/, все')
+    .set('TendersTulaRegion', 'Закупки с https://zakupki.tularegion.ru/, все')
+    .set('TendersKpResort', 'Закупки с https://zakup.kpresort.ru/, все');
 
 
 let export_map = [];
