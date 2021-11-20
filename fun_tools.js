@@ -514,7 +514,7 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersSetOnline', 'ParserWebCore/log_setonline')
     .set('TendersCrimeaBt', 'UnParserSelen/log_crimeabt')
     .set('TendersSalavat', 'ParserKotlinNew/logdir_tenders_salavat')
-    .set('TendersGosYakut', 'ParserWebFSharp/log_tenders_gosyakut')
+    .set('TendersGosYakut', 'ParserWebCore/log_gosyakut')
     .set('TendersIceTrade', 'ParserWebGo/log_icetrade')
     .set('TendersBelMarket', 'UnParserSelen/log_belmarket')
     .set('TendersUmzVrn', 'ParserKotlinNew/logdir_tenders_umz')
@@ -569,7 +569,7 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersRwBy', 'ParserWebCore/log_rwby')
     .set('TendersTenderer', 'ParserWebFSharp/log_tenders_tenderer')
     .set('TendersSamolet', 'ParserWebFSharp/log_tenders_samolet')
-    .set('TendersMts', 'WebParserRust/logdir_mts')
+    .set('TendersMts', 'ParserWebCore/log_mts')
     .set('TendersNefaz', 'WebParserRust/logdir_nefaz')
     .set('TendersKamgb', 'WebParserRust/logdir_kamgb')
     .set('TendersUds', 'WebParserRust/logdir_uds')
@@ -789,7 +789,12 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersLenReg', 'ParserWebCore/log_lenreg')
     .set('TendersDsk1', 'ParserKotlinNew/logdir_tenders_dsk1')
     .set('TendersSlaveco', 'UnParserSelen/log_slaveco')
-    .set('TendersBrusnika', 'UnParserSelen/log_brusnika');
+    .set('TendersBrusnika', 'UnParserSelen/log_brusnika')
+    .set('TendersDvina', 'ParserWebCore/log_dvina')
+    .set('TendersKursk', 'ParserWebCore/log_kursk')
+    .set('TendersUfin', 'ParserWebCore/log_ufin')
+    .set('TendersTatar', 'ParserWebCore/log_tatar')
+    .set('TendersTverZmo', 'ParserWebCore/log_tverzmo');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1150,7 +1155,12 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersLenReg', 'Закупки с https://zakupki.lenreg.ru/, все')
     .set('TendersDsk1', 'Закупки с https://tender.dsk1.ru/, все')
     .set('TendersSlaveco', 'Закупки с https://tender.slaveco.ru/, все')
-    .set('TendersBrusnika', 'Закупки с https://srm.brusnika.ru/, все');
+    .set('TendersBrusnika', 'Закупки с https://srm.brusnika.ru/, все')
+    .set('TendersDvina', 'Закупки с https://zakupki.dvinaland.ru/, все')
+    .set('TendersKursk', 'Закупки с http://zak.imkursk.ru/, все')
+    .set('TendersUfin', 'Закупки с http://goszakaz.ufin48.ru/, все')
+    .set('TendersTatar', 'Закупки с https://etpzakupki.tatar/, все')
+    .set('TendersTverZmo', 'Закупки с https://www.tver.ru/, все');
 
 
 let export_map = [];
