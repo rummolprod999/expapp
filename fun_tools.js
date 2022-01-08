@@ -794,7 +794,14 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersKursk', 'ParserWebCore/log_kursk')
     .set('TendersUfin', 'ParserWebCore/log_ufin')
     .set('TendersTatar', 'ParserWebCore/log_tatar')
-    .set('TendersTverZmo', 'ParserWebCore/log_tverzmo');
+    .set('TendersTverZmo', 'ParserWebCore/log_tverzmo')
+    .set('TendersBash', 'ParserWebCore/log_bash')
+    .set('TendersCds', 'ParserKotlinNew/logdir_tenders_cds')
+    .set('TendersMidural', 'ParserWebCore/log_midural')
+    .set('TendersMordov', 'ParserWebCore/log_mordov')
+    .set('TendersKurg', 'ParserWebCore/log_kurg')
+    .set('TendersSngb', 'ParserWebFSharp/log_tenders_sngb')
+    .set('TendersMobWin', 'ParserWebCore/log_mobwin');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1160,7 +1167,14 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersKursk', 'Закупки с http://zak.imkursk.ru/, все')
     .set('TendersUfin', 'Закупки с http://goszakaz.ufin48.ru/, все')
     .set('TendersTatar', 'Закупки с https://etpzakupki.tatar/, все')
-    .set('TendersTverZmo', 'Закупки с https://www.tver.ru/, все');
+    .set('TendersTverZmo', 'Закупки с https://www.tver.ru/, все')
+    .set('TendersBash', 'Закупки с https://zakaz.bashkortostan.ru/, все')
+    .set('TendersCds', 'Закупки с https://tender.cds.spb.ru/, все')
+    .set('TendersMidural', 'Закупки с https://torgi.midural.ru/, все')
+    .set('TendersMordov', 'Закупки с https://goszakaz44.e-mordovia.ru/, все')
+    .set('TendersKurg', 'Закупки с https://zakupki.45fin.ru/, все')
+    .set('TendersSngb', 'Закупки с https://www.sngb.ru/, все')
+    .set('TendersMobWin', 'Закупки с https://www.mobile-win.ru/, все');
 
 
 let export_map = [];
