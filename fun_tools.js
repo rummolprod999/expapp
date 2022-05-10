@@ -458,7 +458,7 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersSpecTorgWeb', 'ParserTenders/log_spectorg_web')
     .set('TendersTektorgGazprom', 'ParserWebGo/log_tekgaz')
     .set('TendersTektorgInterRao', 'ParserWebGo/log_tekrao')
-    .set('TendersTektorgRZD', 'ParserTenders/log_tektorg_rzd')
+    .set('TendersTektorgRZD', 'ParserWebGo/log_tekrzd')
     .set('Tenders615', 'ParserTenders/log_tenders615')
     .set('TendersFromEIS', 'ParserTenders/log_tenders_web')
     .set('TendersUkr', 'ParserUkr/log_tenders_ukr')
@@ -662,7 +662,7 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersDochki', 'WebParserRust/logdir_dochki')
     .set('TendersSportMaster', 'ParserWebCore/log_sportmaster')
     .set('TendersCisLink', 'ParserWebFSharp/log_tenders_cislink')
-    .set('TendersTekSil', 'ParserWebCore/log_teksil')
+    .set('TendersTekSil', 'ParserWebGo/log_teksil')
     .set('TendersPetr', 'ParserWebFSharp/log_tenders_petr')
     .set('TendersSberb2b', 'ParserWebCore/log_sberb2b')
     .set('TendersRosatom', 'ParserWebGo/log_rosatom')
@@ -801,7 +801,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersMordov', 'ParserWebCore/log_mordov')
     .set('TendersKurg', 'ParserWebCore/log_kurg')
     .set('TendersSngb', 'ParserWebFSharp/log_tenders_sngb')
-    .set('TendersMobWin', 'ParserWebCore/log_mobwin');
+    .set('TendersMobWin', 'ParserWebCore/log_mobwin')
+    .set('TendersTekSibur', 'ParserWebGo/log_teksibur');
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
     .set('Tenders223Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 223')
@@ -1174,7 +1175,8 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersMordov', 'Закупки с https://goszakaz44.e-mordovia.ru/, все')
     .set('TendersKurg', 'Закупки с https://zakupki.45fin.ru/, все')
     .set('TendersSngb', 'Закупки с https://www.sngb.ru/, все')
-    .set('TendersMobWin', 'Закупки с https://www.mobile-win.ru/, все');
+    .set('TendersMobWin', 'Закупки с https://www.mobile-win.ru/, все')
+    .set('TendersTekSibur', 'Закупки с https://www.tektorg.ru/sibur/procedures, все');
 
 
 let export_map = [];
