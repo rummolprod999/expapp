@@ -29,11 +29,3 @@ T
 $.idea/codeStyles/codeStyleConfig.xml,d/d/dd7b3350c29c49497756c7f32c69a3bed18b1cba
 A
 routes/tenders.js,b/b/bb353480b8ede6a3e1a6804ea9f74c1d2422ccbc
-6
-app.js,4/a/4a68969ef8e858229267b842dedf42ab5dde4d50
-A
-views/tenders.hbs,3/5/357505d37985b23fb30422888350a2f0b79ee670
->
-views/file.hbs,4/4/44bb5bff0c6e26207b7a6d1bc993c9988f3f4b5f
-@
-views/layout.hbs,3/3/337c5e950c60805614f302427be09431ecb93e2f
