@@ -805,7 +805,8 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersTekSibur', 'ParserWebGo/log_teksibur')
     .set('ParserTekRn', 'ParserWebCore/log_tekrn')
     .set('TendersStroyServ', 'ParserKotlinNew/logdir_tenders_stroyserv')
-    .set('TendersAcron', 'ParserWebCore/log_acron');
+    .set('TendersAcron', 'ParserWebCore/log_acron')
+    .set('TendersEtpdon', 'UnParserSelen/log_etpdon');
 
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
@@ -1150,11 +1151,12 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('TendersZmoAmurObl', 'Закупки с https://zmo-amurobl.rts-tender.ru/, все')
     .set('TendersZmoDvrt', 'Закупки с https://zmodvrt.rts-tender.ru/, все')
     .set('TendersStroyServ', 'Закупки с https://stroyservis.com/, все')
-    .set('TendersAcron', 'Закупки с https://etp.acron.ru/, все')
+    .set('TendersStroyServ', 'Закупки с https://stroyservis.com/, все')
+    .set('TendersEtpdon', 'Закупки с https://etpdon.online/, все')
     .set('TendersAlfa', 'НЕ РАБОТАЕТ Закупки с https://alfabank.ru/tenders/current/, все, ссылки ведут на https://www.b2b-center.ru/market/')
     .set('TendersBaltika', 'НЕ РАБОТАЕТ Закупки с https://corporate.baltika.ru/, все')
     .set('TendersLada', 'НЕ РАБОТАЕТ Закупки с https://lada-image.ru/, все')
-    .set('TendersKurg', 'НЕТ РЕЕСТРА Закупки с https://zakupki.45fin.ru/, все')
+    .set('TendersKurg', 'Закупки с https://zakupki.45fin.ru/, все')
     .set('TendersBico', 'Закупки с https://www.bicotender.ru/, все')
     .set('TendersTander', 'НЕ РАБОТАЕТ Закупки с http://magnit-info.ru/, коммерческие, есть на B2B')
     .set('TendersEtpRF', 'НЕ РАБОТАЕТ (КАПЧА) Закупки с http://etprf.ru/, коммерческие')
