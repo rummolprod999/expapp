@@ -816,7 +816,17 @@ map.set('Tenders44Fz', 'ParserTenders/log_tenders44')
     .set('TendersTekSpec', 'ParserWebGo/log_tekspec')
     .set('TendersMmkCoal', 'ParserKotlinNew/logdir_tenders_mmkcoal')
     .set('Grls', 'ParserWebGo/log_grls')
-    .set('TendersPrNeft', 'ParserKotlinNew/logdir_tenders_prneft');
+    .set('TendersPrNeft', 'ParserKotlinNew/logdir_tenders_prneft')
+    .set('TendersZakazRfEx', 'ParserKotlinNew/logdir_tenders_zakazrfex')
+    .set('TendersZakazRfUdmurt', 'ParserKotlinNew/logdir_tenders_zakazrfudmurt')
+    .set('TendersEtpAgro', 'ParserKotlinNew/logdir_tenders_etpagro')
+    .set('TendersOrelStroy', 'UnParserSelen/log_orelstroy')
+    .set('TendersSevZakaz', 'ParserWebFSharp/log_tenders_sevzakaz')
+    .set('TendersLevel', 'UnParserSelen/log_level')
+    .set('TendersUdsOil', 'ParserWebCore/log_udsoil')
+    .set('TendersUos', 'ParserWebCore/log_uos')
+    .set('TendersZmk', 'ParserWebCore/log_zmk')
+    .set('TendersTekmarketNew', 'ParserWebCore/log_tekmarket');
 
 
 let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zakupki.gov.ru/, ФЗ 44')
@@ -1205,7 +1215,17 @@ let map_description = new Map().set('Tenders44Fz', 'Закупки с http://zak
     .set('Suppliers223OpenData', 'ОТКЛЮЧЕН Поставщики с https://clearspending.ru/, ФЗ 223')
     .set('Contracts223', 'ПУСТОЙ КАТАЛОГ ОТЛОЖЕН Завершенные контракты с http://zakupki.gov.ru/, ФЗ 223')
     .set('TendersRosneft', 'ОТКЛЮЧЕН Закупки с http://ws-rn.tektorg.ru, коммерческие')
-    .set('TendersBidBe', 'ОТКЛЮЧЕН Закупки с https://bidbe.ru/, все');
+    .set('TendersBidBe', 'ОТКЛЮЧЕН Закупки с https://bidbe.ru/, все')
+    .set('TendersZakazRfEx', 'Закупки с http://zakazrf.ru/NotificationEx, все')
+    .set('TendersZakazRfUdmurt', 'Закупки с http://udmurtia.zakazrf.ru/DeliveryRequest, все')
+    .set('TendersEtpAgro', 'Закупки с https://zakupka.etpagro.ru/, все')
+    .set('TendersOrelStroy', 'Закупки с https://etzp.orelstroy.ru/, все')
+    .set('TendersSevZakaz', 'Закупки с https://rks.sevzakaz.ru/, все')
+    .set('TendersLevel', 'Закупки с https://etp.level.ru/, все')
+    .set('TendersUdsOil', 'Закупки с https://udsoil.ru/, все')
+    .set('TendersUos', 'Закупки с https://uos.ru/, все')
+    .set('TendersZmk', 'Закупки с https://www.zmk.ru/, все')
+    .set('TendersTekMarketNew', 'Закупки с https://www.tektorg.ru/market/procedures, все');
 
 
 let export_map = [];
